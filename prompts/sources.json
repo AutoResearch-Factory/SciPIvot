@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "source_tree_label": "source benchmark repository",
+  "source_paths_are_relative_to_source_tree": true,
+  "copied_prompts": [
+    {
+      "source_path": "BENCH_ASK_PROMPT.md",
+      "sha256": "b3f6fb92a4d5d2a6993bbf31a0fa8b48fd781d1aa71cb89aa76e52d5b867bad4",
+      "size_bytes": 1189,
+      "destination_path": "BENCH_ASK_PROMPT.md",
+      "internal_original_sha256": "578e58f19cdf11b258a4b51b75438cdab35ba2b2c5f9c1fab0fc670811f8b39f",
+      "released_copy_genericized": true
+    },
+    {
+      "source_path": "BENCH_RECONSIDER_PROMPT.md",
+      "sha256": "ae0a6394ef30b71e2e326711cbf7396c6b9e55f472bcd07de06eb0b9f532188e",
+      "size_bytes": 315,
+      "destination_path": "BENCH_RECONSIDER_PROMPT.md"
+    },
+    {
+      "source_path": "BREAKPOINT_CASE_PROMPT.md",
+      "sha256": "4273f59545dedf308e8df1fd208789584702d47586ab17b5b1573f2a65ffe053",
+      "size_bytes": 10991,
+      "destination_path": "BREAKPOINT_CASE_PROMPT.md",
+      "internal_original_sha256": "a9ae41022827fb424011fb6db56677facd2b3cb267983f37bfe84804ea254c75",
+      "released_copy_genericized": true
+    }
+  ],
+  "verification_inputs": [
+    {
+      "source_path": "the evaluation harness (ask entry point)",
+      "sha256": "5546e2e098f7d1177a36936f78765be956d4db9c656ec1c8bb97a1b76ef6afa8",
+      "size_bytes": 20182
+    },
+    {
+      "source_path": "the evaluation harness (reconsider entry point)",
+      "sha256": "7469048de9fd58f268a00648ecf4e9556f5c50673b0652081a9d5180fc2e3cee",
+      "size_bytes": 17975
+    },
+    {
+      "source_path": "the evaluation harness (report module)",
+      "sha256": "5df636c14ea22b1bd08d6b8bf5afe807c1ea17313fba5f87240251f91cf2bcd9",
+      "size_bytes": 20369
+    },
+    {
+      "sha256": "05d57bc9ac4dbd5ba51ee5a2f2443104f7d9255355428854bd4f9f14b4e76722",
+      "size_bytes": 1017489,
+      "source_label": "frozen case manifest"
+    },
+    {
+      "sha256": "b3d3db752f1b6953c5e480f8985650dd1faf8356f7b3b5d30a2972aea09865eb",
+      "size_bytes": 153746889,
+      "line_count": 48563,
+      "source_label": "evaluation log"
+    }
+  ],
+  "template_extraction": {
+    "implementation_source": "the evaluation harness (ask entry point)",
+    "function": "read_templates",
+    "heading_pattern": "^##\\s+(project|blind)\\s*$",
+    "regex_flags": [
+      "MULTILINE"
+    ],
+    "body": "Slice after the matching heading through before the next project/blind heading, or EOF; apply .strip(\"\\n\") + \"\\n\".",
+    "encoding": "UTF-8",
+    "ask_sha256_by_arm": {
+      "project": "22613fc33bc22f626ba5918e7a5b667a7495f69de63b7b035002b55aa1b8b54a",
+      "blind": "de9dddb5cdd01bee3474734b465fc184fd4dc5dad4aac911fc7b0d43e5d285b2"
+    },
+    "rendering": "Repeat 0: wrong then correct; repeat 1: correct then wrong. Substitute .strip() of each plan into {a} and {b}, in that order, using str.replace. Hash the rendered UTF-8 prompt as prompt_sha256.",
+    "whole_file_sha256_is_not_ask_sha256": true
+  },
+  "historical_log_verification": {
+    "effort": "medium",
+    "case_selection": "Require case_id and options_sha256 to match an entry in the frozen case manifest.",
+    "deduplication": "Last row in file order per key; mirrors the report module's latest_only rule.",
+    "deduplication_key": [
+      "case_id",
+      "options_sha256",
+      "arm",
+      "engine",
+      "model",
+      "effort",
+      "prompt_sha256",
+      "repeat"
+    ],
+    "models": [
+      "claude-opus-5",
+      "gpt-5.6-sol",
+      "gpt-5.6-terra",
+      "gpt-6-astra",
+      "grok-4.6"
+    ],
+    "by_arm": {
+      "project": {
+        "errors": 0
+      },
+      "blind": {
+        "errors": 0
+      },
+      "reconsider": {
+        "errors": 0
+      },
+      "rereconsider": {
+        "errors": 0
+      }
+    },
+    "result": "Every retained row matches the released template and rendered-prompt digests; zero mismatches.",
+    "scope": "Verifies the recorded template and rendered-prompt digests of the retained runs against this snapshot. It does not independently establish complete session contents, tool configuration, system messages, or historical source code versions.",
+    "source_label": "evaluation log",
+    "cohort": "The final benchmark contains 248 cases with unchanged plans and prompts."
+  },
+  "casewriter_verification": {
+    "manifest_field": "prompt_sha256",
+    "manifest_prompt_sha256": "a9ae41022827fb424011fb6db56677facd2b3cb267983f37bfe84804ea254c75",
+    "matches_current_copied_template": true,
+    "scope": "Manifest-level agreement only; individual historical casewriter calls and instruction compliance were not independently verified.",
+    "source_label": "frozen case manifest"
+  },
+  "privacy_scope": "Only generic prompts and their verification metadata are included here. Personal source paths, filesystem timestamps, and internal release labels are omitted; prompt bytes, digests, verification counts, and verification limitations are preserved. No accounts, credentials, retained sessions, or raw research conversations are included.",
+  "release_note": "Public copies of the case-writing prompt and the ask prompt are lightly genericized: internal system and role names, workspace repository names, and internal tool module paths were replaced with generic terms. Field meanings and instructions are unchanged. \"internal_original_sha256\" preserves the digest of the byte-exact internal original where the released copy differs."
+}

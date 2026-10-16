@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use SciPIvot, please cite it as below."
+type: dataset
+title: "SciPIvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents"
+authors:
+  - family-names: Sun
+    given-names: Youran
+  - family-names: Ren
+    given-names: Xingyu
+  - family-names: Yi
+    given-names: Chugang
+  - family-names: Zhang
+    given-names: Kejia
+  - family-names: Wu
+    given-names: Di
+  - family-names: Cao
+    given-names: Yingkang
+  - family-names: Zhou
+    given-names: Allen
+  - family-names: Ye
+    given-names: Jianping
+  - family-names: Liu
+    given-names: Suying
+  - family-names: Guo
+    given-names: Jiaxuan
+  - family-names: Du
+    given-names: Jianda
+  - family-names: Ye
+    given-names: Weicheng
+  - family-names: Liu
+    given-names: Kecheng
+  - family-names: Zhang
+    given-names: Hefan
+  - family-names: Wang
+    given-names: Haixin
+  - family-names: Xiao
+    given-names: Jie
+  - family-names: Yang
+    given-names: Eric
+  - family-names: Yang
+    given-names: Haizhao
+date-released: "2026-10-16"
+url: "https://github.com/AutoResearch-Factory/SciPIvot"
+license: CC-BY-4.0
+keywords:
+  - benchmark
+  - scientific research agents
+  - scientific judgment
+  - large language models
+  - evaluation

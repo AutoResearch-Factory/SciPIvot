@@ -1,0 +1,11 @@
+model,arm,n_pairs,wrong_to_wrong,wrong_to_right,right_to_wrong,right_to_right,net_accuracy_change,unparsed_children,parsed_pairs,parsed_fix,parsed_break
+gpt-6-astra,reconsider,496,157,44,42,253,0.004032258064516129,0,496,44,42
+claude-opus-5,reconsider,496,241,62,46,147,0.03225806451612903,0,496,62,46
+grok-4.6,reconsider,496,294,38,34,130,0.008064516129032258,0,496,38,34
+gpt-5.6-sol,reconsider,496,240,82,97,77,-0.03024193548387097,0,496,82,97
+gpt-5.6-terra,reconsider,496,155,196,83,62,0.22782258064516128,0,496,196,83
+gpt-6-astra,rereconsider,496,183,16,10,287,0.012096774193548387,0,496,16,10
+claude-opus-5,rereconsider,496,270,17,44,165,-0.05443548387096774,0,496,17,44
+grok-4.6,rereconsider,496,288,40,42,126,-0.004032258064516129,1,495,40,42
+gpt-5.6-sol,rereconsider,496,240,97,69,90,0.056451612903225805,0,496,97,69
+gpt-5.6-terra,rereconsider,496,144,94,140,118,-0.09274193548387097,0,496,94,140
