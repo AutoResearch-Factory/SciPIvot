@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf6ef">
+  <meta name="description" content="SciPIvot benchmarks the judgment of AI research agents at pivotal moments: 248 decisions from real projects where a senior researcher had to correct the agent's plan.">
+  <meta property="og:title" content="SciPIvot — Benchmarking PI Judgment of AI Research Agents">
+  <meta property="og:description" content="248 decisions from real research. Two competing plans. Can AI make the call a principal investigator would?">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/social-card.png">
+  <meta property="og:url" content="https://autoresearch-factory.github.io/SciPIvot/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://autoresearch-factory.github.io/SciPIvot/">
+  <title>SciPIvot — Benchmarking PI Judgment of AI Research Agents</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.7 3.3-.4 6.5-1.6 6.5-7.3a6 6 0 0 0-1.5-4.2c.2-.8.3-2.3-.2-3.8 0 0-1.2-.4-4.1 1.6a14 14 0 0 0-7.4 0C4.4-.4 3.2 0 3.2 0c-.5 1.5-.4 3-.2 3.8A6 6 0 0 0 1.5 8c0 5.7 3.2 6.9 6.5 7.3-.6.7-.6 1.7-.5 2.7v4" transform="translate(1 1) scale(.9)"/></symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 4v16h17M8 15v-5m5 5V6m5 9v-3"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V4H4v11h4"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8Zm0 0v5h5M8 12h8m-8 4h6"/></symbol>
+    <symbol id="icon-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M7 7l-3 7h6Zm10 0-3 7h6Z"/></symbol>
+    <symbol id="icon-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#main"><img src="assets/mark.svg" width="30" height="30" alt=""><span>Sci<b>&#928;</b>vot</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <a href="#finding">The finding</a>
+        <a href="#cases">Cases</a>
+        <a href="#results">Results</a>
+        <a href="#protocol">Protocol</a>
+        <a href="#use">Use the benchmark</a>
+        <a class="nav-github" href="https://github.com/AutoResearch-Factory/SciPIvot"><svg class="icon"><use href="#icon-github"/></svg>GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">BENCHMARKING PRINCIPAL-INVESTIGATOR JUDGMENT</p>
+          <h1 class="reveal d1">Knowing what<br>to try <em>next</em>.</h1>
+          <p class="hero-lede reveal d2">AI research agents can keep experiments running for months. The bottleneck is judgment — the calls a principal investigator makes when a project stalls. <strong>SciPIvot</strong> turns 248 of those calls, corrected by senior researchers in real projects, into a test.</p>
+          <div class="hero-actions reveal d3">
+            <a class="button button-primary" href="#cases"><svg class="icon"><use href="#icon-grid"/></svg>Try a decision<svg class="icon"><use href="#icon-arrow"/></svg></a>
+            <a class="button button-outline" href="#results"><svg class="icon"><use href="#icon-chart"/></svg>See the results</a>
+            <a class="button button-outline" href="https://github.com/AutoResearch-Factory/SciPIvot"><svg class="icon"><use href="#icon-github"/></svg>GitHub</a>
+          </div>
+          <p class="hero-status reveal d4">Question set, prompts &amp; aggregate results released<span>·</span>Project records on Hugging Face soon</p>
+        </div>
+        <div class="hero-visual reveal d2" aria-label="A benchmark case: two competing plans">
+          <div class="plan-duel">
+            <p class="duel-caption">A RESEARCH PROJECT STALLS. TWO PLANS. ONE CALL.</p>
+            <article class="plan-card plan-rejected">
+              <header><span class="plan-tag">Original LLM plan</span><span class="verdict" aria-label="rejected">&#10007;</span></header>
+              <p class="plan-goal"><span>Goal</span> Finish the evaluation tier after the calibration stopped at 8 of 12 cells.</p>
+              <p>Move to the larger model and rerun the same tasks with the same scorer.</p>
+            </article>
+            <div class="duel-vs"><span>vs</span></div>
+            <article class="plan-card plan-reference">
+              <header><span class="plan-tag">Human-corrected plan</span><span class="verdict" aria-label="correct">&#10003;</span></header>
+              <p class="plan-goal"><span>Goal</span> Same goal.</p>
+              <p>Keep the small model. Check the scorer's answer extraction first — the zeros may measure the grader, not the model.</p>
+            </article>
+            <p class="duel-note">Real case from the benchmark. The project record before the correction is the evidence.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container hero-stats reveal d4" role="list" aria-label="Benchmark at a glance">
+        <div class="stat" role="listitem"><strong>248</strong><span>pivotal decisions</span></div>
+        <div class="stat" role="listitem"><strong>26</strong><span>real research projects</span></div>
+        <div class="stat" role="listitem"><strong>6</strong><span>scientific fields</span></div>
+        <div class="stat" role="listitem"><strong>29,760</strong><span>model responses</span></div>
+        <div class="stat" role="listitem"><strong>73.4<small>%</small></strong><span>fresh-researcher baseline</span></div>
+      </div>
+    </section>
+
+    <!-- ============ THE FINDING ============ -->
+    <section class="finding-section" id="finding">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow light">THE FINDING</p>
+          <h2>Four of five frontier models<br>score <em>below chance</em>.</h2>
+          <p class="section-lede">Given the project record and both plans, models systematically prefer the plan the senior researcher rejected. The best score across all models and effort settings is <strong>63.5%</strong> — against <strong>73.4%</strong> for researchers new to the project.</p>
+        </div>
+        <div class="finding-grid">
+          <article class="finding-card reveal">
+            <p class="finding-kicker">THE PARADOX OF CONTEXT</p>
+            <h3>Every model scores <em>lower</em> with the project record.</h3>
+            <p>Mean accuracy drops from 55.8&#8202;% to 39.2&#8202;% when the agent may read the project. Inherited explanations in the record can make the rejected plan look justified.</p>
+            <div class="delta-chart" role="img" aria-label="Accuracy change when the project record is added, per model: Astra minus 4.2, Opus minus 20.0, Grok minus 21.0, Sol minus 11.7, Terra minus 26.6 percentage points">
+              <div class="delta-row"><span class="delta-name">Astra</span><span class="delta-track"><span class="delta-bar" style="--w:15.8%"></span></span><span class="delta-val">&#8722;4.2 pp</span></div>
+              <div class="delta-row"><span class="delta-name">Opus</span><span class="delta-track"><span class="delta-bar" style="--w:75.2%"></span></span><span class="delta-val">&#8722;20.0 pp</span></div>
+              <div class="delta-row"><span class="delta-name">Grok</span><span class="delta-track"><span class="delta-bar" style="--w:79.0%"></span></span><span class="delta-val">&#8722;21.0 pp</span></div>
+              <div class="delta-row"><span class="delta-name">Sol</span><span class="delta-track"><span class="delta-bar" style="--w:44.0%"></span></span><span class="delta-val">&#8722;11.7 pp</span></div>
+              <div class="delta-row"><span class="delta-name">Terra</span><span class="delta-track"><span class="delta-bar" style="--w:100%"></span></span><span class="delta-val">&#8722;26.6 pp</span></div>
+            </div>
+            <p class="chart-note">Accuracy change with the project record vs the options-only condition, medium effort, 248 cases.</p>
+          </article>
+          <article class="finding-card reveal d1">
+            <p class="finding-kicker">RE-TRAPPING</p>
+            <h3>More deliberation can walk <em>back</em> into the same mistake.</h3>
+            <p>Asked to reconsider twice, models repaired 422 errors — and introduced 302 new ones. The second review undid part of the first. On 49 cases, all five models chose the rejected plan in both option orders.</p>
+            <div class="repair-viz" role="img" aria-label="First review: 422 repairs, 302 new errors. Second review: 264 repairs, 305 new errors.">
+              <div class="repair-stage">
+                <p class="repair-label">Review 1</p>
+                <div class="repair-bars">
+                  <div class="repair-bar repair-good"><span class="repair-fill" style="--w:100%"></span><span class="repair-num">422 repaired</span></div>
+                  <div class="repair-bar repair-bad"><span class="repair-fill" style="--w:71.6%"></span><span class="repair-num">302 new errors</span></div>
+                </div>
+              </div>
+              <div class="repair-stage">
+                <p class="repair-label">Review 2</p>
+                <div class="repair-bars">
+                  <div class="repair-bar repair-good"><span class="repair-fill" style="--w:62.6%"></span><span class="repair-num">264 repaired</span></div>
+                  <div class="repair-bar repair-bad"><span class="repair-fill" style="--w:72.3%"></span><span class="repair-num">305 new errors</span></div>
+                </div>
+              </div>
+            </div>
+            <p class="chart-note">Answer transitions across five models and both option orders. Repeated responses are not independent cases.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASES ============ -->
+    <section class="section container" id="cases">
+      <div class="section-heading centered reveal">
+        <p class="eyebrow">TRY A RESEARCH DECISION</p>
+        <h2>What would <em>you</em> do next?</h2>
+        <p class="section-lede">Read the situation, weigh the two plans, then reveal the senior researcher's call. These three cases are condensed from the benchmark.</p>
+      </div>
+      <div class="case-tabs reveal" role="tablist" aria-label="Example research cases">
+        <button role="tab" id="tab-scorer" aria-selected="true" aria-controls="case-panel" data-case="scorer"><span>01</span>The zeros that measured the grader</button>
+        <button role="tab" id="tab-cloth" tabindex="-1" aria-selected="false" aria-controls="case-panel" data-case="cloth"><span>02</span>Parameters that looked like a rule</button>
+        <button role="tab" id="tab-simulator" tabindex="-1" aria-selected="false" aria-controls="case-panel" data-case="simulator"><span>03</span>A finding — or a simulator bug?</button>
+      </div>
+      <div class="example-panel reveal d1" id="case-panel" role="tabpanel" aria-labelledby="tab-scorer">
+        <div class="case-context">
+          <div class="case-context-top">
+            <span class="domain-tag" id="case-domain">AI &amp; MACHINE LEARNING</span>
+            <span class="example-label">CONDENSED SOURCE CASE</span>
+          </div>
+          <h3 id="case-title">Scale the model — or check the scorer?</h3>
+          <p id="case-context">A project is building an evaluation set with difficulty levels for a 0.8B model. Three LiveCodeBench groups score 0&#8202;/&#8202;480. A project note claims earlier checks ruled out an evaluation fault.</p>
+          <div class="evidence-window">
+            <div class="evidence-title"><svg class="icon"><use href="#icon-file"/></svg>Evidence at the decision point</div>
+            <dl id="case-evidence">
+              <div><dt>Observed</dt><dd>0.8B model scores 0 on three code groups</dd></div>
+              <div><dt>Claim in notes</dt><dd>Earlier checks ruled out an evaluation fault</dd></div>
+              <div><dt>Unverified</dt><dd>Whether the scorer extracts answers at all</dd></div>
+            </dl>
+          </div>
+          <div class="case-schematic"><img id="case-image" src="assets/case-scorer.svg" alt="Schematic of an evaluation pipeline where the grader skips answer extraction" width="600" height="320"></div>
+          <p class="snapshot-note">The complete task includes the frozen project record. This condensed example is for exploring the question format.</p>
+        </div>
+        <div class="case-decision">
+          <div class="decision-heading"><h4>Choose the next plan</h4><span>ONE ANSWER</span></div>
+          <div class="answer-options" role="group" aria-label="Candidate research plans">
+            <button class="answer" data-answer="a" aria-pressed="false">
+              <span class="answer-letter">A</span>
+              <span class="answer-body"><strong id="answer-a-title">Scale up the model.</strong><span id="answer-a-body">Trust the note. Retest with a 2B model, keeping the tasks and the scorer.</span></span>
+              <span class="answer-radio" aria-hidden="true"></span>
+            </button>
+            <button class="answer" data-answer="b" aria-pressed="false">
+              <span class="answer-letter">B</span>
+              <span class="answer-body"><strong id="answer-b-title">Audit the scorer.</strong><span id="answer-b-body">Keep 0.8B. Check and fix the scorer's answer extraction, regrade, and add official tasks.</span></span>
+              <span class="answer-radio" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="answer-result" id="answer-result" role="status" hidden></div>
+          <div class="case-controls">
+            <button class="button button-primary" id="reveal-answer" disabled>Reveal the reasoning<svg class="icon"><use href="#icon-arrow"/></svg></button>
+            <button class="text-button" id="reset-case" hidden>Try another case &#8635;</button>
+          </div>
+          <p class="example-feedback" id="copy-feedback" role="status"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTS ============ -->
+    <section class="results-section" id="results">
+      <div class="container">
+        <div class="section-heading results-heading reveal">
+          <div>
+            <p class="eyebrow">FULL RESULTS</p>
+            <h2>Twenty-four responses<br>per model, per case.</h2>
+          </div>
+          <p class="section-lede">Twelve conditions &#215; two option orders. Explore the grid: switch the condition and the requested effort setting. Chance is 50&#8202;%; the star marks the fresh-researcher baseline.</p>
+        </div>
+        <div class="result-panel reveal d1">
+          <div class="result-toolbar">
+            <div class="segmented" role="group" aria-label="Evaluation condition">
+              <button type="button" data-arm="project" aria-pressed="true">With project</button>
+              <button type="button" data-arm="options" aria-pressed="false">Options only</button>
+            </div>
+            <div class="effort-picker" role="group" aria-label="Requested effort setting">
+              <span class="effort-label">Effort</span>
+              <button type="button" data-effort="low">low</button>
+              <button type="button" data-effort="medium" aria-pressed="true">medium</button>
+              <button type="button" data-effort="high">high</button>
+              <button type="button" data-effort="xhigh">xhigh</button>
+              <button type="button" data-effort="max">max</button>
+            </div>
+          </div>
+          <div class="result-table-scroll">
+            <table class="results-table">
+              <caption class="sr-only">Model accuracy by condition and effort setting.</caption>
+              <thead><tr>
+                <th scope="col">Model</th>
+                <th scope="col">Accuracy</th>
+                <th scope="col">Score</th>
+                <th scope="col">Best observed</th>
+              </tr></thead>
+              <tbody id="result-rows"></tbody>
+              <tfoot>
+                <tr class="human-row"><th scope="row"><span class="model-symbol human">&#9733;</span>Fresh researchers</th>
+                  <td><div class="meter"><span class="meter-fill human-fill" style="--w:73.4%"></span><span class="chance" style="left:50%"></span><span class="human-mark" style="left:73.4%">&#9733;</span></div></td>
+                  <td class="score-cell">73.4%</td><td class="best-cell">—</td></tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="result-bottom">
+            <p id="result-summary" role="status">With project · medium effort · five-model mean 39.2%.</p>
+            <a class="text-link" href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/results"><svg class="icon"><use href="#icon-file"/></svg>Download the CSVs</a>
+          </div>
+        </div>
+        <div class="result-notes reveal">
+          <p>Best observed is the highest score among seven conditions (five effort settings plus two reviews at medium effort). 95&#8202;% intervals from 10,000 paired bootstrap samples are in the paper and the released CSVs. Requested effort settings are not equal token budgets.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROTOCOL ============ -->
+    <section class="protocol-section" id="protocol">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">HOW A CASE IS BUILT</p>
+          <h2>A research history<br>becomes a question.</h2>
+          <p class="section-lede">Six months of frontier research. Senior researchers repeatedly corrected the agents' judgments. The completed history shows what each correction bought — and becomes the answer key.</p>
+        </div>
+        <ol class="pipeline reveal">
+          <li><span class="step-number">1</span><h3>Find the intervention</h3><p>Locate where a senior researcher changed the agent's plan in a recorded project history.</p></li>
+          <li><span class="step-number">2</span><h3>Freeze the record</h3><p>Preserve the code, logs, and notes exactly as they stood before the correction.</p></li>
+          <li><span class="step-number">3</span><h3>Recover both plans</h3><p>The original LLM plan, and the human-corrected plan reconstructed from the correction and what the project learned after it.</p></li>
+          <li><span class="step-number">4</span><h3>Evaluate the choice</h3><p>Both option orders, with and without the project record. Choosing the corrected plan counts as correct.</p></li>
+        </ol>
+        <div class="boundary-panel reveal d1">
+          <div class="boundary can-see">
+            <p class="boundary-label"><svg class="icon"><use href="#icon-check"/></svg>THE MODEL CAN SEE</p>
+            <h3>The project before the correction</h3>
+            <p>Idea, proposal, progress notes, code and logs at the frozen commit — and the two plans in neutral wording.</p>
+          </div>
+          <div class="boundary held-back">
+            <p class="boundary-label"><svg class="icon"><use href="#icon-db"/></svg>HELD BACK</p>
+            <h3>Everything after</h3>
+            <p>The reference label, the human correction itself, subsequent outcomes, and the case-construction notes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ USE IT ============ -->
+    <section class="section container" id="use">
+      <div class="section-heading centered reveal">
+        <p class="eyebrow">USE THE BENCHMARK</p>
+        <h2>Download it and <em>run</em>.</h2>
+        <p class="section-lede">The full question set, exact prompts, and aggregate baselines are released. Render a prompt, ask your model, score the answers.</p>
+      </div>
+      <div class="use-grid reveal">
+        <article class="use-card">
+          <p class="use-icon"><svg class="icon"><use href="#icon-grid"/></svg></p>
+          <h3>Questions</h3>
+          <p>All 248 cases with both option texts and reference answers, in JSON and plain text.</p>
+          <a class="text-link" href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/data">Get the question set<svg class="icon"><use href="#icon-arrow"/></svg></a>
+        </article>
+        <article class="use-card">
+          <p class="use-icon"><svg class="icon"><use href="#icon-file"/></svg></p>
+          <h3>Prompts</h3>
+          <p>The exact evaluation and reconsideration prompts, plus the case-writing instructions.</p>
+          <a class="text-link" href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/prompts">Read the prompts<svg class="icon"><use href="#icon-arrow"/></svg></a>
+        </article>
+        <article class="use-card">
+          <p class="use-icon"><svg class="icon"><use href="#icon-scale"/></svg></p>
+          <h3>Scoring</h3>
+          <p>Render prompts in either option order and score responses with the paper's protocol.</p>
+          <a class="text-link" href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/scripts">Run the scripts<svg class="icon"><use href="#icon-arrow"/></svg></a>
+        </article>
+      </div>
+      <div class="snippet-wrap reveal d1">
+        <div class="snippet-head"><span>QUICKSTART</span><button class="copy-btn" type="button" data-copy="snippet"><svg class="icon"><use href="#icon-copy"/></svg><span>Copy</span></button></div>
+        <pre id="snippet"><code># render one case (order ab puts options.A in slot A)
+python scripts/make_prompt.py --id case_000 --condition project --order ab
+
+# ask your model, then score the responses
+python scripts/score.py predictions.json --ci</code></pre>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section container faq-section" id="faq">
+      <div class="section-heading reveal">
+        <p class="eyebrow">BEFORE YOU USE IT</p>
+        <h2>A few important details.</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details open><summary>What exactly does SciPIvot measure?<span aria-hidden="true">+</span></summary><p>Recognition of corrective scientific decisions: whether a model can pick the plan a senior researcher actually endorsed, from the project state available at the time. It is a diagnostic on selected cases where model responses vary — not an estimate of how often these failures occur in research at large.</p></details>
+        <details><summary>Where do the cases come from?<span aria-hidden="true">+</span></summary><p>Six months of research in which senior researchers ran LLM agents on 26 PhD-level projects across six scientific fields, from PDE solving to robotics to biological imaging, and repeatedly intervened. The benchmark draws its cases from those recorded interventions.</p></details>
+        <details><summary>Does a human intervention automatically make a plan correct?<span aria-hidden="true">+</span></summary><p>The intervention identifies a candidate decision. The reference plan is grounded in the correction and in the experimental record that explains it. It is not a claim that every alternative direction is invalid — it is the best-supported next step for that project's question.</p></details>
+        <details><summary>Why test with and without the project record?<span aria-hidden="true">+</span></summary><p>A model can pick the reference option from wording alone. The options-only condition exposes that. The surprising part: on these cases every model does worse with the record — the inherited explanations in it can make the rejected plan look justified.</p></details>
+        <details><summary>Are the project records available?<span aria-hidden="true">+</span></summary><p>Yes. The frozen project records are being released as a Hugging Face dataset, packaged per project at the exact commits the cases use. The question set, prompts, and aggregate results are already in the GitHub repository.</p></details>
+      </div>
+    </section>
+
+    <!-- ============ CITE ============ -->
+    <section class="cite-section" id="cite">
+      <div class="container cite-inner reveal">
+        <div>
+          <p class="eyebrow light">CITE SCIPivot</p>
+          <h2>The next experiment<br>is a decision.</h2>
+          <p class="section-lede">Use the benchmark. Build agents that make the call themselves.</p>
+        </div>
+        <div class="cite-box">
+          <div class="snippet-head"><span>BIBTEX</span><button class="copy-btn" type="button" data-copy="bibtex"><svg class="icon"><use href="#icon-copy"/></svg><span>Copy</span></button></div>
+          <pre id="bibtex"><code>@misc{scipivot2026,
+  author = {{AutoResearch-Factory}},
+  title  = {{SciPIvot}: Benchmarking Principal-Investigator
+            Judgment at Pivotal Moments of Scientific
+            AutoResearch Agents},
+  year   = {2026},
+  url    = {https://github.com/AutoResearch-Factory/SciPIvot}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div>
+        <a class="brand" href="#main"><img src="assets/mark.svg" width="28" height="28" alt="">Sci<b>&#928;</b>vot</a>
+        <p>Scientific judgment at pivotal moments of AutoResearch.<br>A project from AutoResearch Factory.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="#cases">Example cases</a>
+        <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/data">Question set</a>
+        <a href="#protocol">Evaluation protocol</a>
+        <a href="https://github.com/AutoResearch-Factory/SciPIvot">GitHub &#8599;</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>Released under CC BY 4.0 &#183; Question set, prompts &amp; aggregate results</span>
+      <a href="#main">Back to top &#8593;</a>
+    </div>
+  </footer>
+</body>
+</html>

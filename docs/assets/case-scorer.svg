@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320">
+<defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0v30" fill="none" stroke="#243247" stroke-width=".6"/></pattern></defs>
+<rect width="600" height="320" fill="#121e2e"/><rect width="600" height="320" fill="url(#grid)"/><path d="M0 44h600" stroke="#2b384b"/>
+<g font-family="monospace" font-size="12" fill="#8ca1bd"><text x="22" y="28">EVALUATION PIPELINE</text><text x="447" y="28">SOURCE CASE 01</text></g>
+<g stroke-linecap="round" stroke-linejoin="round">
+  <!-- pipeline boxes -->
+  <rect x="33" y="86" width="118" height="58" rx="8" fill="#1a293c" stroke="#34445b"/>
+  <rect x="191" y="86" width="118" height="58" rx="8" fill="#1a293c" stroke="#34445b"/>
+  <rect x="349" y="86" width="118" height="58" rx="8" fill="#1a293c" stroke="#f1b987" stroke-dasharray="5 5"/>
+  <rect x="349" y="188" width="118" height="58" rx="8" fill="#1a293c" stroke="#66c7bd"/>
+  <path d="M151 115h33m-8-7 8 7-8 7" fill="none" stroke="#53657c"/>
+  <path d="M309 115h33m-8-7 8 7-8 7" fill="none" stroke="#53657c"/>
+  <path d="M408 152v22m-7-7 7 7 7-7" fill="none" stroke="#f1b987" stroke-dasharray="4 5"/>
+  <!-- grader internals: extraction missing -->
+  <path d="M368 108h80" stroke="#53657c"/>
+  <circle cx="377" cy="126" r="5" fill="none" stroke="#f1b987" stroke-width="1.6"/>
+  <path d="M375 124l4 4m0-4-4 4" stroke="#f1b987" stroke-width="1.6"/>
+  <text x="392" y="130" font-family="monospace" font-size="10.5" fill="#f1b987">answer extraction</text>
+</g>
+<g font-family="monospace" font-size="11">
+  <text x="50" y="110" fill="#e1e9f5">480 tasks</text><text x="50" y="128" fill="#859bb9">3 code groups</text>
+  <text x="208" y="110" fill="#e1e9f5">model outputs</text><text x="208" y="128" fill="#859bb9">raw text</text>
+  <text x="366" y="100" fill="#859bb9">GRADER</text>
+  <text x="366" y="212" fill="#66c7bd">0 / 480 after fix</text><text x="366" y="230" fill="#859bb9">70 recovered answers</text>
+</g>
+<g font-family="monospace" font-size="12"><text x="497" y="112" fill="#e1e9f5">0/480</text><text x="497" y="132" fill="#f1b987">measured the</text><text x="497" y="148" fill="#f1b987">grader, not</text><text x="497" y="164" fill="#f1b987">the model</text></g>
+<text x="24" y="302" font-family="monospace" font-size="10" fill="#7890ae">SCHEMATIC / CHECK THE INSTRUMENT BEFORE THE SCIENCE</text>
+</svg>

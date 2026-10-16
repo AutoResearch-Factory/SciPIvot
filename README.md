@@ -1,5 +1,22 @@
 # SciPIvot
 
+<p align="center">
+  <strong>Knowing what to try next.</strong><br>
+  A benchmark for the scientific judgment of AI research agents.
+</p>
+<p align="center">
+  <a href="https://autoresearch-factory.github.io/SciPIvot/"><img src="https://img.shields.io/badge/landing-page-004488?style=for-the-badge" alt="Landing page"></a>
+  <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/data"><img src="https://img.shields.io/badge/questions-248%20cases-a67c13?style=for-the-badge" alt="248 cases"></a>
+  <img src="https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey?style=for-the-badge" alt="CC BY 4.0">
+</p>
+<p align="center">
+  &#128279; <a href="https://autoresearch-factory.github.io/SciPIvot/">Landing page</a> &#183;
+  <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/data">Question set</a> &#183;
+  <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/prompts">Prompts</a> &#183;
+  <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/results">Results</a>
+</p>
+
+
 **Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents**
 
 SciPIvot is a 248-case benchmark of **scientific judgment** built from human corrections in six months of real frontier research: senior researchers ran LLM agents on 26 PhD-level projects across six scientific fields and repeatedly intervened to correct the agents' research judgments. Each case asks an evaluator to choose between the **original LLM plan** and the **human-corrected alternative**, using only the project record that existed before the correction.

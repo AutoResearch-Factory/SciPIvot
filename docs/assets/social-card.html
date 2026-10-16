@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: "IBM Plex Sans", sans-serif; color: #22303f;
+    background:
+      radial-gradient(ellipse 80% 60% at 90% -10%, rgba(166,124,19,.1), transparent 60%),
+      #faf6ef;
+    padding: 64px 72px; position: relative;
+  }
+  .mark { display: flex; align-items: center; gap: 18px; margin-bottom: 54px; }
+  .mark img { width: 64px; height: 64px; }
+  .mark span { font-family: "Fraunces", serif; font-size: 40px; font-weight: 600; color: #004488; }
+  .mark b { color: #a67c13; }
+  h1 { font-family: "Fraunces", serif; font-size: 74px; line-height: 1.02; color: #004488; font-weight: 560; letter-spacing: -.5px; max-width: 760px; }
+  h1 em { font-style: italic; color: #a67c13; }
+  .sub { margin-top: 28px; font-size: 25px; color: #5c6b7d; max-width: 700px; line-height: 1.45; }
+  .chips { position: absolute; right: 72px; bottom: 120px; display: grid; gap: 16px; width: 320px; }
+  .chip { border-radius: 16px; padding: 20px 24px; font-size: 19px; line-height: 1.4; }
+  .chip small { display: block; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; }
+  .chip.a { background: #fbf3dc; border: 1.5px solid rgba(166,124,19,.45); }
+  .chip.a small { color: #a67c13; }
+  .chip.b { background: #e1e8f1; border: 1.5px solid rgba(26,93,160,.45); }
+  .chip.b small { color: #1a5da0; }
+  .foot { position: absolute; left: 72px; bottom: 56px; font-family: "IBM Plex Mono", monospace; font-size: 17px; letter-spacing: .14em; color: #8a97a8; }
+</style>
+</head>
+<body>
+  <div class="mark"><img src="mark.svg" alt=""><span>Sci<b>&#928;</b>vot</span></div>
+  <h1>Knowing what<br>to try <em>next</em>.</h1>
+  <p class="sub">248 pivotal decisions from real research &#8212; a benchmark for the scientific judgment of AI research agents.</p>
+  <div class="chips">
+    <div class="chip a"><small>Original LLM plan</small>The agent&#8217;s own plan at the stall.</div>
+    <div class="chip b"><small>Human-corrected plan</small>What the senior researcher did instead.</div>
+  </div>
+  <p class="foot">AUTORESEARCH FACTORY &#183; github.com/AutoResearch-Factory/SciPIvot</p>
+</body>
+</html>

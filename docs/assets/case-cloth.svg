@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320">
+<defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0v30" fill="none" stroke="#243247" stroke-width=".6"/></pattern></defs>
+<rect width="600" height="320" fill="#121e2e"/><rect width="600" height="320" fill="url(#grid)"/><path d="M0 44h600" stroke="#2b384b"/>
+<g font-family="monospace" font-size="12" fill="#8ca1bd"><text x="22" y="28">PARAMETER FIT</text><text x="447" y="28">SOURCE CASE 02</text></g>
+<g>
+  <!-- six dials: four locked at zero, two at limits -->
+  <g font-family="monospace" font-size="10.5">
+    <!-- locked dials -->
+    <g transform="translate(46,88)"><rect width="72" height="72" rx="10" fill="#1a293c" stroke="#34445b"/><rect x="12" y="30" width="48" height="8" rx="3" fill="#2a3b52"/><rect x="12" y="30" width="4" height="8" rx="2" fill="#53657c"/><text x="36" y="60" text-anchor="middle" fill="#859bb9">kappa</text><text x="36" y="22" text-anchor="middle" fill="#8ca1bd">0</text><path d="M52 8a7 7 0 0 1 13 3v5" fill="none" stroke="#7890ae" stroke-width="2"/><rect x="49" y="15" width="19" height="13" rx="3" fill="#2a3b52" stroke="#7890ae"/></g>
+    <g transform="translate(134,88)"><rect width="72" height="72" rx="10" fill="#1a293c" stroke="#34445b"/><rect x="12" y="30" width="48" height="8" rx="3" fill="#2a3b52"/><rect x="12" y="30" width="4" height="8" rx="2" fill="#53657c"/><text x="36" y="60" text-anchor="middle" fill="#859bb9">bnd</text><text x="36" y="22" text-anchor="middle" fill="#8ca1bd">0</text><path d="M52 8a7 7 0 0 1 13 3v5" fill="none" stroke="#7890ae" stroke-width="2"/><rect x="49" y="15" width="19" height="13" rx="3" fill="#2a3b52" stroke="#7890ae"/></g>
+    <g transform="translate(222,88)"><rect width="72" height="72" rx="10" fill="#1a293c" stroke="#34445b"/><rect x="12" y="30" width="48" height="8" rx="3" fill="#2a3b52"/><rect x="12" y="30" width="4" height="8" rx="2" fill="#53657c"/><text x="36" y="60" text-anchor="middle" fill="#859bb9">stretch</text><text x="36" y="22" text-anchor="middle" fill="#8ca1bd">0</text><path d="M52 8a7 7 0 0 1 13 3v5" fill="none" stroke="#7890ae" stroke-width="2"/><rect x="49" y="15" width="19" height="13" rx="3" fill="#2a3b52" stroke="#7890ae"/></g>
+    <g transform="translate(310,88)"><rect width="72" height="72" rx="10" fill="#1a293c" stroke="#34445b"/><rect x="12" y="30" width="48" height="8" rx="3" fill="#2a3b52"/><rect x="12" y="30" width="4" height="8" rx="2" fill="#53657c"/><text x="36" y="60" text-anchor="middle" fill="#859bb9">shear</text><text x="36" y="22" text-anchor="middle" fill="#8ca1bd">0</text><path d="M52 8a7 7 0 0 1 13 3v5" fill="none" stroke="#7890ae" stroke-width="2"/><rect x="49" y="15" width="19" height="13" rx="3" fill="#2a3b52" stroke="#7890ae"/></g>
+    <!-- free dials pinned at limits -->
+    <g transform="translate(410,88)"><rect width="72" height="72" rx="10" fill="#1a293c" stroke="#f1b987"/><rect x="12" y="30" width="48" height="8" rx="3" fill="#2a3b52"/><rect x="52" y="26" width="10" height="16" rx="3" fill="#f1b987"/><text x="36" y="60" text-anchor="middle" fill="#e1e9f5">alpha</text><text x="36" y="22" text-anchor="middle" fill="#f1b987">max</text></g>
+    <g transform="translate(498,88)"><rect width="72" height="72" rx="10" fill="#1a293c" stroke="#f1b987"/><rect x="12" y="30" width="48" height="8" rx="3" fill="#2a3b52"/><rect x="52" y="26" width="10" height="16" rx="3" fill="#f1b987"/><text x="36" y="60" text-anchor="middle" fill="#e1e9f5">delta</text><text x="36" y="22" text-anchor="middle" fill="#f1b987">max</text></g>
+    <!-- floor line -->
+    <path d="M46 196h524" stroke="#2b384b"/>
+    <text x="46" y="216" fill="#859bb9">4 PARAMETERS AT ZERO — A CHOICE, NEVER A MEASUREMENT</text>
+    <text x="46" y="238" fill="#f1b987">2 PARAMETERS PINNED AT THE SEARCH LIMITS</text>
+  </g>
+  <g transform="translate(46,252)" font-family="monospace" font-size="10.5">
+    <rect width="524" height="30" rx="6" fill="#1a293c" stroke="#34445b"/>
+    <text x="14" y="19" fill="#8ca1bd">REFERENCE</text>
+    <text x="108" y="19" fill="#66c7bd">fit all six around the defaults, keep the slice as a comparison</text>
+  </g>
+</g>
+<text x="24" y="302" font-family="monospace" font-size="10" fill="#7890ae">SCHEMATIC / QUESTION THE RESTRICTION BEFORE THE SEARCH</text>
+</svg>
