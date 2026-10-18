@@ -48,6 +48,9 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("predictions", help=".json or .jsonl predictions file")
     ap.add_argument("--questions", default=str(QUESTIONS))
+    ap.add_argument("--stage", type=int, default=0,
+                    help="for run_project.py output: 0 = first answer, 1 and 2 = "
+                         "after one and two reconsiderations (rows without a stage always count)")
     ap.add_argument("--ci", action="store_true",
                     help="95% case-bootstrap interval (paper settings)")
     args = ap.parse_args()
@@ -64,6 +67,8 @@ def main() -> None:
         case_id = row.get("id")
         if case_id not in refs:
             unknown_ids += 1
+            continue
+        if row.get("stage", args.stage) != args.stage:
             continue
         order = str(row.get("order", "ab")).lower()
         choice = parse_choice(row.get("response", row.get("choice")))

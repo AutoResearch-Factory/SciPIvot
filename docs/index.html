@@ -61,9 +61,11 @@
           <div class="hero-actions reveal d3">
             <a class="button button-primary" href="#cases"><svg class="icon"><use href="#icon-grid"/></svg>Try a decision<svg class="icon"><use href="#icon-arrow"/></svg></a>
             <a class="button button-outline" href="#results"><svg class="icon"><use href="#icon-chart"/></svg>See the results</a>
+            <a class="button button-outline" href="https://arxiv.org/abs/2610.21082"><svg class="icon"><use href="#icon-file"/></svg>Paper</a>
             <a class="button button-outline" href="https://github.com/AutoResearch-Factory/SciPIvot"><svg class="icon"><use href="#icon-github"/></svg>GitHub</a>
+            <a class="button button-outline" href="https://huggingface.co/datasets/sun1245/SciPIvot"><svg class="icon"><use href="#icon-db"/></svg>Dataset</a>
           </div>
-          <p class="hero-status reveal d4">Question set, prompts &amp; aggregate results released<span>·</span>Project records on Hugging Face soon</p>
+          <p class="hero-status reveal d4">Question set, prompts &amp; aggregate results released<span>·</span><a href="https://huggingface.co/datasets/sun1245/SciPIvot">Project records on Hugging Face</a></p>
         </div>
         <div class="hero-visual reveal d2" aria-label="A benchmark case: two competing plans">
           <div class="plan-duel">
@@ -282,7 +284,7 @@
       <div class="section-heading centered reveal">
         <p class="eyebrow">USE THE BENCHMARK</p>
         <h2>Download it and <em>run</em>.</h2>
-        <p class="section-lede">The full question set, exact prompts, and aggregate baselines are released. Render a prompt, ask your model, score the answers.</p>
+        <p class="section-lede">The full question set, the frozen project records, exact prompts, and aggregate baselines are released. Fetch the records, run your agent, score the answers.</p>
       </div>
       <div class="use-grid reveal">
         <article class="use-card">
@@ -303,14 +305,22 @@
           <p>Render prompts in either option order and score responses with the paper's protocol.</p>
           <a class="text-link" href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/scripts">Run the scripts<svg class="icon"><use href="#icon-arrow"/></svg></a>
         </article>
+        <article class="use-card">
+          <p class="use-icon"><svg class="icon"><use href="#icon-db"/></svg></p>
+          <h3>Project records</h3>
+          <p>The 230 frozen project records behind the cases, exactly as the models saw them, with checksums.</p>
+          <a class="text-link" href="https://huggingface.co/datasets/sun1245/SciPIvot">Get the records<svg class="icon"><use href="#icon-arrow"/></svg></a>
+        </article>
       </div>
       <div class="snippet-wrap reveal d1">
         <div class="snippet-head"><span>QUICKSTART</span><button class="copy-btn" type="button" data-copy="snippet"><svg class="icon"><use href="#icon-copy"/></svg><span>Copy</span></button></div>
-        <pre id="snippet"><code># render one case (order ab puts options.A in slot A)
-python scripts/make_prompt.py --id case_000 --condition project --order ab
+        <pre id="snippet"><code># fetch the project record for a case (accept the terms on Hugging Face first)
+python scripts/fetch_records.py --id case_000 --out records
 
-# ask your model, then score the responses
-python scripts/score.py predictions.json --ci</code></pre>
+# run an agent on it in both option orders, then score
+python scripts/run_project.py --id case_000 --engine claude --model claude-opus-5 \
+    --records records --out runs.jsonl
+python scripts/score.py runs.jsonl --ci</code></pre>
       </div>
     </section>
 
@@ -325,7 +335,7 @@ python scripts/score.py predictions.json --ci</code></pre>
         <details><summary>Where do the cases come from?<span aria-hidden="true">+</span></summary><p>Six months of research in which senior researchers ran LLM agents on 26 PhD-level projects across six scientific fields, from PDE solving to robotics to biological imaging, and repeatedly intervened. The benchmark draws its cases from those recorded interventions.</p></details>
         <details><summary>Does a human intervention automatically make a plan correct?<span aria-hidden="true">+</span></summary><p>The intervention identifies a candidate decision. The reference plan is grounded in the correction and in the experimental record that explains it. It is not a claim that every alternative direction is invalid — it is the best-supported next step for that project's question.</p></details>
         <details><summary>Why test with and without the project record?<span aria-hidden="true">+</span></summary><p>A model can pick the reference option from wording alone. The options-only condition exposes that. The surprising part: on these cases every model does worse with the record — the inherited explanations in it can make the rejected plan look justified.</p></details>
-        <details><summary>Are the project records available?<span aria-hidden="true">+</span></summary><p>Yes. The frozen project records are being released as a Hugging Face dataset, packaged per project at the exact commits the cases use. The question set, prompts, and aggregate results are already in the GitHub repository.</p></details>
+        <details><summary>Are the project records available?<span aria-hidden="true">+</span></summary><p>Yes. The 230 frozen project records are a <a href="https://huggingface.co/datasets/sun1245/SciPIvot">Hugging Face dataset</a>, one archive per commit the cases use, exactly as the models saw them. Enter your name and affiliation on the dataset page and access is immediate; <code>scripts/fetch_records.py</code> downloads and checks them.</p></details>
       </div>
     </section>
 

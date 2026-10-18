@@ -6,11 +6,15 @@
 </p>
 <p align="center">
   <a href="https://autoresearch-factory.github.io/SciPIvot/"><img src="https://img.shields.io/badge/landing-page-004488?style=for-the-badge" alt="Landing page"></a>
+  <a href="https://arxiv.org/abs/2610.21082"><img src="https://img.shields.io/badge/arXiv-2610.21082-b31b1b?style=for-the-badge" alt="arXiv"></a>
+  <a href="https://huggingface.co/datasets/sun1245/SciPIvot"><img src="https://img.shields.io/badge/project%20records-Hugging%20Face-ffcc4d?style=for-the-badge" alt="Project records on Hugging Face"></a>
   <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/data"><img src="https://img.shields.io/badge/questions-248%20cases-a67c13?style=for-the-badge" alt="248 cases"></a>
   <img src="https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey?style=for-the-badge" alt="CC BY 4.0">
 </p>
 <p align="center">
   &#128279; <a href="https://autoresearch-factory.github.io/SciPIvot/">Landing page</a> &#183;
+  <a href="https://arxiv.org/abs/2610.21082">Paper</a> &#183;
+  <a href="https://huggingface.co/datasets/sun1245/SciPIvot">Project records</a> &#183;
   <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/data">Question set</a> &#183;
   <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/prompts">Prompts</a> &#183;
   <a href="https://github.com/AutoResearch-Factory/SciPIvot/tree/main/results">Results</a>
@@ -23,18 +27,21 @@ SciPIvot is a 248-case benchmark of **scientific judgment** built from human cor
 
 > Frontier models systematically prefer the original LLM plan over the human-corrected one. At medium reasoning effort with the project record, four of five frontier models score below chance on the selected cases. The best score across tested models and effort settings is **63.5%**, against **73.4%** for fresh researchers.
 
-Paper: *SciPIvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents* (arXiv preprint coming soon).
+Paper: *SciPIvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents* ([arXiv:2610.21082](https://arxiv.org/abs/2610.21082)).
 
 ## What is in this repository
 
 | Path | Contents |
 |------|----------|
-| `data/questions.json` | The complete 248-case question set: case id, both options in exact wording, reference answer |
+| `data/questions.json` | The complete 248-case question set: case id, both options in exact wording, reference answer, project record |
+| `data/snapshots.jsonl` | The 230 project records: archive and unpacked-tree checksums, sizes, file counts |
 | `data/questions.txt` | Same set in plain text |
 | `prompts/` | Exact evaluation prompts (project / options-only / reconsideration) and the case-writing prompt |
 | `results/` | Aggregate model results for all twelve evaluation conditions |
 | `scripts/make_prompt.py` | Render the evaluation prompt for any case, in either option order |
 | `scripts/score.py` | Score model responses against reference answers |
+| `scripts/fetch_records.py` | Download, check and unpack the project records from Hugging Face |
+| `scripts/run_project.py` | Run cases with Claude Code or Codex in a sandbox, as in the paper |
 
 ## The task
 
@@ -66,6 +73,26 @@ python scripts/score.py predictions.json
 {"id": "case_000", "order": "ab", "response": "B"}
 ```
 
+### The project condition
+
+The *project* condition needs the project record each case was asked against. The records are on [Hugging Face](https://huggingface.co/datasets/sun1245/SciPIvot): accept the terms there once (name and affiliation; access is immediate), then
+
+```bash
+pip install huggingface_hub zstandard
+hf auth login
+
+# Download, check and unpack the records for some cases (or --all: 230 records, 21 GB)
+python scripts/fetch_records.py --id case_000 --id case_001 --out records
+
+# Run them as in the paper: both option orders, one fresh session each
+export ANTHROPIC_API_KEY=...        # or OPENAI_API_KEY for --engine codex
+python scripts/run_project.py --id case_000 --id case_001 --condition project \
+    --engine claude --model claude-opus-5 --effort medium --records records --out runs/opus.jsonl
+python scripts/score.py runs/opus.jsonl
+```
+
+`run_project.py` needs Linux with [bubblewrap](https://github.com/containers/bubblewrap) (`apt install bubblewrap`) and the agent's CLI (`claude` or `codex`) on `PATH`. Each session sees the record read-only at `/project`, an empty scratch HOME, and the system; not your home directory, your agent settings, or any other record. Claude Code gets only Read, Grep and Glob; Codex gets no `AGENTS.md`, rules or web search. `--condition options-only` mounts nothing. `--reconsider 2` continues each session twice with the reconsideration prompt; score a stage with `score.py --stage 1` or `--stage 2`.
+
 `response` may also be the raw model output containing a JSON object with a `response` field; unparsed outputs are scored as incorrect. With both option orders present per case, `score.py` reproduces the paper's main score (orders averaged within case, then cases equally weighted). Add `--ci` for the paper's 95% case-bootstrap intervals (10,000 resamples, seed 20261004).
 
 ## Evaluation protocol
@@ -96,7 +123,8 @@ Full tables with 95% intervals, per-condition scores, and reconsideration transi
 {
   "id": "case_000",
   "options": {"A": "Goal: ... Plan: ...", "B": "Goal: ... Plan: ..."},
-  "reference_answer": "B"
+  "reference_answer": "B",
+  "snapshot": "snapshots/<project>/<commit>.tar.zst"
 }
 ```
 
@@ -104,7 +132,7 @@ Case ids are anonymized. Options follow the same English `Goal:` / `Plan:` forma
 
 ## Project records
 
-The frozen project records behind each case are too large for this repository and will be hosted separately. Everything needed to run the question-answering evaluation (questions, prompts, aggregate baselines) is here.
+The 230 project records behind the 248 cases are in the Hugging Face dataset [sun1245/SciPIvot](https://huggingface.co/datasets/sun1245/SciPIvot), one `.tar.zst` per commit (21 GB in all). A record is the project's git tree at the case's commit, without `.git`: no history, and nothing written after the correction. It is exactly what the models in the paper saw at `/project`. Links that point outside the project were not mounted then and are not in the archive; `data/snapshots.jsonl` lists them under `skipped`. `fetch_records.py` checks each archive's `sha256` and each unpacked tree's `tree_sha256` against that file.
 
 ## Release hygiene
 
@@ -114,10 +142,12 @@ The question set and prompts are scrubbed before release: personal identifiers a
 
 ```bibtex
 @misc{scipivot2026,
-  author = {{AutoResearch-Factory}},
-  title = {{SciPIvot}: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents},
-  year = {2026},
-  url = {https://github.com/AutoResearch-Factory/SciPIvot}
+  title         = {{SciPIvot}: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents},
+  author        = {Sun, Youran and Ren, Xingyu and Yi, Chugang and Zhang, Kejia and Wu, Di and Cao, Yingkang and Zhou, Allen and Ye, Jianping and Liu, Suying and Guo, Jiaxuan and Du, Jianda and Ye, Weicheng and Liu, Kecheng and Zhang, Hefan and Wang, Haixin and Xiao, Jie and Yang, Eric and Yang, Haizhao},
+  year          = {2026},
+  eprint        = {2610.21082},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2610.21082}
 }
 ```
 

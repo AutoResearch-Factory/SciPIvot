@@ -1,4 +1,5 @@
 case_000
+Project record: snapshots/cd-projection-ladder/f4fc03fbf671890bfac5152be831f86a9f3da3d0.tar.zst
 
 Option A
 Goal: Write a MATH-500 near-side fingerprint paper for NeurIPS Findings, the Datasets and Benchmarks track, or a workshop.
@@ -15,6 +16,7 @@ Reference answer: B
 ========================================================================
 
 case_001
+Project record: snapshots/cloth-renormalization/372511acb0607fce660892c4c9f93c80f0c35044.tar.zst
 
 Option A
 Goal: Fit the original five-parameter resolution law after a large-deformation model and a new force measurement are in place.
@@ -31,6 +33,7 @@ Reference answer: B
 ========================================================================
 
 case_002
+Project record: snapshots/cloth-renormalization/7bfd1cc3675207790bdf4b259855c2b115db6cd9.tar.zst
 
 Option A
 Goal: Find the best native effective parameters on a 3 by 3 grid of spatial and time resolutions and then measure how those parameters change with resolution.
@@ -47,6 +50,7 @@ Reference answer: A
 ========================================================================
 
 case_003
+Project record: snapshots/cloth-renormalization/af5baa7d21ddf270c3e6c00c8b84967fb90c1eeb.tar.zst
 
 Option A
 Goal: Start the 3 by 3 resolution matrix after RG predictions beat the Transferred baseline on both contact treatments.
@@ -63,6 +67,7 @@ Reference answer: B
 ========================================================================
 
 case_004
+Project record: snapshots/cloth-renormalization/b56e6ba388a5ecb46e813b12e17740c16bfcf58c.tar.zst
 
 Option A
 Goal: Obtain the identified effective-parameter curves versus scale from independent global searches on one host after a same-host objective check.
@@ -79,6 +84,7 @@ Reference answer: A
 ========================================================================
 
 case_005
+Project record: snapshots/cloth-renormalization/baa7644d78d9773752b7a462a9f74c1d69860ee7.tar.zst
 
 Option A
 Goal: Calibrate a larger differential-evolution and CMA-ES search on the fine widened-box cell, then identify effective parameters on the admitted scales with that protocol.
@@ -95,6 +101,7 @@ Reference answer: B
 ========================================================================
 
 case_006
+Project record: snapshots/cloth-renormalization/a1bfe675216271a712866ab4ee4ca852e89ce369.tar.zst
 
 Option A
 Goal: Select a search method for later scale-by-scale identification by comparing a new grid search with the current optimizer on the fine and coarse cells.
@@ -111,6 +118,7 @@ Reference answer: A
 ========================================================================
 
 case_007
+Project record: snapshots/cloth-renormalization/65d3a07b2b961965229a6bf2f53d4638472023ef.tar.zst
 
 Option A
 Goal: Identify the six simulator parameters on one time-step cell, using the six-parameter reference vector as the search center.
@@ -127,6 +135,7 @@ Reference answer: A
 ========================================================================
 
 case_008
+Project record: snapshots/cloth-renormalization/2fe5118389b22716667b0a2268149cd8af063d69.tar.zst
 
 Option A
 Goal: Get a six-parameter fit on the G2 cloth and treat mesh spacing on that cloth as the spatial-scale ladder.
@@ -143,6 +152,7 @@ Reference answer: A
 ========================================================================
 
 case_009
+Project record: snapshots/cloth-renormalization/e3f278b241f3d90f4835bedf8328e4bba9059b37.tar.zst
 
 Option A
 Goal: Find six-parameter endpoints at mesh k=4 with grouped alternating search.
@@ -159,6 +169,7 @@ Reference answer: A
 ========================================================================
 
 case_010
+Project record: snapshots/contact-error-budget/59dbaa8bbe51ef96b2e258da884bc145bb7571a1.tar.zst
 
 Option A
 Goal: Test whether the mid-SR MultiHMR DTW row stays after leave-one-out, and whether that row pattern appears on two more HMR sources.
@@ -175,6 +186,7 @@ Reference answer: B
 ========================================================================
 
 case_011
+Project record: snapshots/contact-error-budget/a44aa4613711e01054c4ad7a35eb18c3122ad4dd.tar.zst
 
 Option A
 Goal: Test ranking robustness and MultiHMR training failure on the existing BeyondMimic-R18b and GMR panel.
@@ -191,6 +203,7 @@ Reference answer: B
 ========================================================================
 
 case_012
+Project record: snapshots/contact-error-budget/69f0cd1854110e9edfb9692f6b98ca20e2e2d741.tar.zst
 
 Option A
 Goal: Test whether any one 1D scalar can predict humanoid-tracker rollout success by beating a matched four-channel baseline on Brier score.
@@ -207,6 +220,7 @@ Reference answer: B
 ========================================================================
 
 case_013
+Project record: snapshots/contact-error-budget/c1f4e06a9d10ecf76650a70f3acfb3f2f3ca024e.tar.zst
 
 Option A
 Goal: See which of three new PPO seeds on the R203 WHAM 12-clip mix pass a success-rate gate at 1000 training iterations, and collect rollouts from the seeds that pass.
@@ -223,6 +237,7 @@ Reference answer: B
 ========================================================================
 
 case_014
+Project record: snapshots/contact-error-budget/8a5bc20808aec4ab3cf35a61061efc69f3873111.tar.zst
 
 Option A
 Goal: Measure how four pre-rollout geometric channels relate to six post-rollout quantities, and how those six post-rollout quantities relate to one another.
@@ -239,6 +254,7 @@ Reference answer: A
 ========================================================================
 
 case_015
+Project record: snapshots/contact-error-budget/0fda3f46c8c4dea3dd46f60b7b2d846b09da2de4.tar.zst
 
 Option A
 Goal: Test whether the submitted post-rollout metric findings still hold when the GVHMR panel grows from 12 clips to 81 clips.
@@ -255,6 +271,7 @@ Reference answer: A
 ========================================================================
 
 case_016
+Project record: snapshots/contact-error-budget/7b90b21c977c2c36c8833e3f32f096753349e315.tar.zst
 
 Option A
 Goal: Measure held-out predictive adequacy of artifact-summary scalars across more than one upstream combination.
@@ -271,6 +288,7 @@ Reference answer: A
 ========================================================================
 
 case_017
+Project record: snapshots/contact-error-budget/c63fce219c1230a831133db87a5467b42026fb81.tar.zst
 
 Option A
 Goal: Run the E8 and E9 held-out predictive-adequacy experiment described in idea.md and proposal.md.
@@ -287,6 +305,7 @@ Reference answer: B
 ========================================================================
 
 case_018
+Project record: snapshots/cot-mon-stego-canary/57b965f0cb04caf2a2ab6266cf14ed740fa2a185.tar.zst
 
 Option A
 Goal: Decide whether the V2 numeric and api_shortcut positive cells stay positive under a target-disambiguating LLM judge and a non-target task accuracy scrub gate.
@@ -303,6 +322,7 @@ Reference answer: A
 ========================================================================
 
 case_019
+Project record: snapshots/cot-mon-stego-canary/217e46733fa2c9f41156c888a65190b1c1634710.tar.zst
 
 Option A
 Goal: Measure extra catch rate of a thought-chain judge at a 10 percent false-alarm cap after the hidden number is swapped, when the judge is shown the hidden answer and when the judge is not shown it.
@@ -319,6 +339,7 @@ Reference answer: A
 ========================================================================
 
 case_020
+Project record: snapshots/cot-mon-stego-canary/d86734ef90ec45b330aff1eccab3dc8de05784a6.tar.zst
 
 Option A
 Goal: Account for the oracle and deployable gap by testing a procedural channel and a referent channel on the cached traces.
@@ -335,6 +356,7 @@ Reference answer: A
 ========================================================================
 
 case_021
+Project record: snapshots/cot-mon-stego-canary/d86734ef90ec45b330aff1eccab3dc8de05784a6.tar.zst
 
 Option A
 Goal: Close the V3 review with the V4 mechanism package, and collect the stripped-prompt deployable repeat and the random hidden-target injection from 20-item OpenAI batch-API calls.
@@ -351,6 +373,7 @@ Reference answer: A
 ========================================================================
 
 case_022
+Project record: snapshots/cpd-lattice/3148e143afdb8a238171ed76aa823bd9a68237aa.tar.zst
 
 Option A
 Goal: Measure whether PDE language context improves CP feature Utility when gpt5.6-sol proposes the candidate bank.
@@ -367,6 +390,7 @@ Reference answer: A
 ========================================================================
 
 case_023
+Project record: snapshots/cpd-lattice/be3a3ec6369d43ebc187c099063c220bf645d918.tar.zst
 
 Option A
 Goal: Test whether LLM-proposed CP features reduce end-to-end solver time on Allen-Cahn, Black-Scholes, wave, and anisotropic diffusion tasks.
@@ -383,6 +407,7 @@ Reference answer: A
 ========================================================================
 
 case_024
+Project record: snapshots/cpd-lattice/bfd2e2dbe2c0f7741cf38271b50663883d3d09b2.tar.zst
 
 Option A
 Goal: Finish the remaining readiness runs and then run the repeated-seed LATTICE matrices on the coordinate and rank-1 feature network.
@@ -399,6 +424,7 @@ Reference answer: B
 ========================================================================
 
 case_025
+Project record: snapshots/cpd-lattice/bdf3cd48dc6645d9c57d0d7fc2ae9e51f6341e8f.tar.zst
 
 Option A
 Goal: Find out if language-conditioned proposals beat matched random banks and Vanilla after the twelve-task zero-init study.
@@ -415,6 +441,7 @@ Reference answer: B
 ========================================================================
 
 case_026
+Project record: snapshots/earth-back-proj/19dc6fb92ec2e3bb4b106c5fd08206dffc09fa9e.tar.zst
 
 Option A
 Goal: Measure residual learning against same-input classical estimators on the opened 22-event R82 panel.
@@ -431,6 +458,7 @@ Reference answer: A
 ========================================================================
 
 case_027
+Project record: snapshots/elf-ecf/0c5d9ffbb790b4495d1152e1b95c9a30a3ba9f34.tar.zst
 
 Option A
 Goal: Choose the next Stage 0 step after the two-by-two path and prediction-target table on 100k sentences.
@@ -447,6 +475,7 @@ Reference answer: A
 ========================================================================
 
 case_028
+Project record: snapshots/elf-ecf/0c5d9ffbb790b4495d1152e1b95c9a30a3ba9f34.tar.zst
 
 Option A
 Goal: Close the three original claims from the 100,000-sentence 2 by 2 runs and choose a new direction.
@@ -463,6 +492,7 @@ Reference answer: B
 ========================================================================
 
 case_029
+Project record: snapshots/elf-ecf/5b9af032346c9969f3d6aa66aa7b17c48925d9e8.tar.zst
 
 Option A
 Goal: Measure LCM scaling as a data-size curve of concept cosine for one large MSE-LCM model.
@@ -479,6 +509,7 @@ Reference answer: B
 ========================================================================
 
 case_030
+Project record: snapshots/elf-ecf/b42beba7feb65477dd62119bd7f8d646a8c34433.tar.zst
 
 Option A
 Goal: Measure whether trained LCM models obey the required data and parameter scaling exponents.
@@ -495,6 +526,7 @@ Reference answer: A
 ========================================================================
 
 case_031
+Project record: snapshots/elf-ecf/667ff097e8e02274bbaad16636013068ac55f39b.tar.zst
 
 Option A
 Goal: Measure the LCM data-axis and parameter-axis scaling exponents with the project R36 training loop.
@@ -511,6 +543,7 @@ Reference answer: B
 ========================================================================
 
 case_032
+Project record: snapshots/elf-ecf/d7c0fd1b2dccc42fa044f4b0b49980ee21d59fb2.tar.zst
 
 Option A
 Goal: Measure Kaplan scaling of LCM loss on one resource at a time, with the other resource left open.
@@ -527,6 +560,7 @@ Reference answer: A
 ========================================================================
 
 case_033
+Project record: snapshots/elf-ecf/66d272a4716f5b62173c5fedb6c785e514ec7948.tar.zst
 
 Option A
 Goal: Judge the current LCM two-axis scaling measurements against the Kaplan exponent interval and continue the Two-Tower run.
@@ -543,6 +577,7 @@ Reference answer: B
 ========================================================================
 
 case_034
+Project record: snapshots/elf-ecf/3e7970a6307e5fa62a6e1cb89097ab1cd74ff3cf.tar.zst
 
 Option A
 Goal: Check the mapped ELF mechanism on the official LCM trainer with a real batch and a short resume.
@@ -559,6 +594,7 @@ Reference answer: A
 ========================================================================
 
 case_035
+Project record: snapshots/elf-ecf/fe616f78d810500aee3f07b032f1f0701535fe26.tar.zst
 
 Option A
 Goal: Complete the matched ECF versus Diffusion-40 comparison and measure inference complexity with sampling-step MAC counts in FLOPs.
@@ -575,6 +611,7 @@ Reference answer: A
 ========================================================================
 
 case_036
+Project record: snapshots/elf-ecf/1365e512edaafac9118b3a6314326b7efff32e59.tar.zst
 
 Option A
 Goal: Measure inference complexity for the matched ECF and Diffusion-40 comparison.
@@ -591,6 +628,7 @@ Reference answer: B
 ========================================================================
 
 case_037
+Project record: snapshots/elf-ecf/36f97ff14e66c73bd1fba7528703443f92ce99e7.tar.zst
 
 Option A
 Goal: Compare ECF with matched Diffusion-40 on C4, ROCStories, and Gutenberg after the R46T run.
@@ -607,6 +645,7 @@ Reference answer: A
 ========================================================================
 
 case_038
+Project record: snapshots/elf-ecf/6b82ae3e1c1dbaf452d6904687be12d5a66dc437.tar.zst
 
 Option A
 Goal: Set the FineWeb-Edu smoke budget and the 20 to 1 exposure for a later 50 million parameter ECF versus Diffusion pilot.
@@ -623,6 +662,7 @@ Reference answer: B
 ========================================================================
 
 case_039
+Project record: snapshots/elf-fk-steer/7adbc6df486af1cf8344979cd4f2b35170e874af.tar.zst
 
 Option A
 Goal: Test whether the current FK candidate sets beat equal-wall-clock controls on XSum using human labels.
@@ -639,6 +679,7 @@ Reference answer: B
 ========================================================================
 
 case_040
+Project record: snapshots/elf-fk-steer/583ca67f7dd4117833686aafb9126ab4986a1ad7.tar.zst
 
 Option A
 Goal: Measure selective_ci_bottom50 on the R49 selected-ID MiniCheck semantic-set endpoint.
@@ -655,6 +696,7 @@ Reference answer: A
 ========================================================================
 
 case_041
+Project record: snapshots/elf-fk-steer/98f824da1f675d7622e6c7eda6e4409d8d060967.tar.zst
 
 Option A
 Goal: Test whether selective_ci_bottom50 beats the named controls on MiniCheck and QAFactEval.
@@ -671,6 +713,7 @@ Reference answer: B
 ========================================================================
 
 case_042
+Project record: snapshots/fex-dim-lift-skeleton/831f0708f94847b6a5db58ca558fa13ad5db205f.tar.zst
 
 Option A
 Goal: Run the lift pipeline on a PDE whose high-dimensional from-scratch FEX search fails.
@@ -687,6 +730,7 @@ Reference answer: A
 ========================================================================
 
 case_043
+Project record: snapshots/fex-dim-lift-skeleton/a9a812118a40432de88058655a7e78546b177680.tar.zst
 
 Option A
 Goal: Answer the V6 review by testing Conservation recovery from a systematic unary linear-combination library and adding a guided GP baseline.
@@ -703,6 +747,7 @@ Reference answer: A
 ========================================================================
 
 case_044
+Project record: snapshots/fex-dim-lift-skeleton/ea088210a3c53004478b399fee18c4638595f5b0.tar.zst
 
 Option A
 Goal: Test whether a d=3 FEX tree can be lifted to d=100 by fitting a linear mix of high-d coordinates at each leaf.
@@ -719,6 +764,7 @@ Reference answer: A
 ========================================================================
 
 case_045
+Project record: snapshots/fex-dim-lift-skeleton/ea088210a3c53004478b399fee18c4638595f5b0.tar.zst
 
 Option A
 Goal: Test whether Conservation can be lifted from a low-d FEX tree to d=100 by a learned mixing matrix.
@@ -735,6 +781,7 @@ Reference answer: A
 ========================================================================
 
 case_046
+Project record: snapshots/fex-dim-lift-skeleton/caa856a88af881876c080efc0e9c578166d59b0f.tar.zst
 
 Option A
 Goal: Choose one high-d transfer from the shape of the low-d FEX tree, and check that choice on Conservation and Helmholtz.
@@ -751,6 +798,7 @@ Reference answer: B
 ========================================================================
 
 case_047
+Project record: snapshots/fex-dim-lift-skeleton/caa856a88af881876c080efc0e9c578166d59b0f.tar.zst
 
 Option A
 Goal: Test whether high-dimensional formulas can be built by trying insertion candidates at each layer of a low-dimensional FEX tree, and obtain positive lifts on at least six PDE families.
@@ -767,6 +815,7 @@ Reference answer: A
 ========================================================================
 
 case_048
+Project record: snapshots/fex-dim-lift-skeleton/bef3f58645960614b52dc85b53273447251ff16c.tar.zst
 
 Option A
 Goal: Decide how to lift a two-dimensional mean-cosine formula to high dimension, and how to treat the current Schrodinger result.
@@ -783,6 +832,7 @@ Reference answer: A
 ========================================================================
 
 case_049
+Project record: snapshots/fex-dim-lift-skeleton/47eec68dfc1ad7ea97b0049f9d84bc79d616e104.tar.zst
 
 Option A
 Goal: Find out whether a random-structure symbolic regression baseline can recover the d=100 expressions for pairwise and the six non-Conservation families.
@@ -799,6 +849,7 @@ Reference answer: B
 ========================================================================
 
 case_050
+Project record: snapshots/fex-dim-lift-skeleton/c2ba18c68d183531404aa0b8719d91d368a4bebc.tar.zst
 
 Option A
 Goal: Add high-dimensional test problems that raise particle count while the interaction form stays the same.
@@ -815,6 +866,7 @@ Reference answer: A
 ========================================================================
 
 case_051
+Project record: snapshots/fex-dim-lift-skeleton/eb8933ee7d0db4cdfbcfaf190b551a8dbd99ad0e.tar.zst
 
 Option A
 Goal: Measure whether a low-dimensional expression tree reduces exhaustive high-dimensional search cost on four transfer primitives.
@@ -831,6 +883,7 @@ Reference answer: A
 ========================================================================
 
 case_052
+Project record: snapshots/fex-dim-lift-skeleton/bae3166a62ff65ffe11ab943b9437665f4b24994.tar.zst
 
 Option A
 Goal: Recover a hidden leaf or pairwise source tree whose affine error is below 1e-3, then run transfer and matched fit-all for Claim K.
@@ -847,6 +900,7 @@ Reference answer: B
 ========================================================================
 
 case_053
+Project record: snapshots/fex-dim-lift-skeleton/39f9db1788fb1e0bdce16c18eca1634db74641ad.tar.zst
 
 Option A
 Goal: Find out how the eight-family tree ablation changes when each cell winner is chosen by PDE residual.
@@ -863,6 +917,7 @@ Reference answer: B
 ========================================================================
 
 case_054
+Project record: snapshots/fex-foundation-model/d51a3bcbee7131831569163b97dac76f51ca7c4f.tar.zst
 
 Option A
 Goal: Measure whether a pretrained PDE-conditioned controller reduces full-FEX search steps on hard and high-dimensional PDEs.
@@ -879,6 +934,7 @@ Reference answer: A
 ========================================================================
 
 case_055
+Project record: snapshots/fex-foundation-model/b690a16b4c8a6c6ebf8895a7f8ff4200d55cf9e1.tar.zst
 
 Option A
 Goal: Choose a data strategy after the real-source bank stays at 44 verified instances, 32 templates, and 21 actions, below the gate of 280 verified instances, 160 templates, and 40 actions.
@@ -895,6 +951,7 @@ Reference answer: B
 ========================================================================
 
 case_056
+Project record: snapshots/fex-foundation-model/6a95bbc81dba895a2bf161466cbf179fbbe54c26.tar.zst
 
 Option A
 Goal: Get paper 2509.07478 through formula checks with the current grammar.
@@ -911,6 +968,7 @@ Reference answer: B
 ========================================================================
 
 case_057
+Project record: snapshots/fex-foundation-model/a0c6e732e01ba4333368a2d110e9e7bdb5c6b5f7.tar.zst
 
 Option A
 Goal: Collect real PDE training examples from new papers, then keep those examples that pass a residual check.
@@ -927,6 +985,7 @@ Reference answer: A
 ========================================================================
 
 case_058
+Project record: snapshots/fex-foundation-model/7986e8bdd541e90caec2aabec630de3179ccaa76.tar.zst
 
 Option A
 Goal: Build a source-real equation database from real arXiv papers, then extract roles and grow the training set.
@@ -943,6 +1002,7 @@ Reference answer: A
 ========================================================================
 
 case_059
+Project record: snapshots/fex-foundation-model/3ebcb11ced50d376234070a5280248f2bf3f3119.tar.zst
 
 Option A
 Goal: Collect enough complete PDE-and-solution examples by opening arXiv tutorials and lecture notes on PDEs, SDEs, mathematical physics methods, and general physics.
@@ -959,6 +1019,7 @@ Reference answer: A
 ========================================================================
 
 case_060
+Project record: snapshots/fex-foundation-model/dc95eea794455619aacd5ed9e61cca3ebe40869e.tar.zst
 
 Option A
 Goal: Recover complete PDE, condition, and solution tuples from real arXiv papers for the FEX training bank.
@@ -975,6 +1036,7 @@ Reference answer: B
 ========================================================================
 
 case_061
+Project record: snapshots/fex-foundation-model/792e3db3f579c30e537280097d41e8ea82f73f7c.tar.zst
 
 Option A
 Goal: Prepare the pretrained versus no-pretrain comparison by compiling more of the current real-source equations.
@@ -991,6 +1053,7 @@ Reference answer: B
 ========================================================================
 
 case_062
+Project record: snapshots/fex-foundation-model/dac159c31f40eefcd0e7a13d88865be05b5d0edd.tar.zst
 
 Option A
 Goal: Calibrate the FEX search baseline on 11 real PDEs and then compare a pretrained controller with a same-architecture controller that has no pretraining.
@@ -1007,6 +1070,7 @@ Reference answer: A
 ========================================================================
 
 case_063
+Project record: snapshots/fex-foundation-model/00394d07b2c8eca3e108ab3abd45faab0c97d160.tar.zst
 
 Option A
 Goal: Find out whether a pretrained real-source controller beats the same network with no pretraining on a 20-row held-out comparison after the depth-lock study and the training split.
@@ -1023,6 +1087,7 @@ Reference answer: B
 ========================================================================
 
 case_064
+Project record: snapshots/fex-foundation-model/ab5c18cbe43e9c6b4e0b4930be146cce8d024630.tar.zst
 
 Option A
 Goal: Collect real-source PDE training records from documented external examples.
@@ -1039,6 +1104,7 @@ Reference answer: A
 ========================================================================
 
 case_065
+Project record: snapshots/fex-foundation-model/cf2b0e16ef9fecb74a1a536e7832870e41cc53e1.tar.zst
 
 Option A
 Goal: Instantiate depth2_rml controllers with hidden width 1 and collect the additional real templates that this topology needs before the next training run.
@@ -1055,6 +1121,7 @@ Reference answer: A
 ========================================================================
 
 case_066
+Project record: snapshots/fex-search-complexity/34025dc91cbc9c29fdf76939032aa4a07624faa9.tar.zst
 
 Option A
 Goal: Give a G3 bridge from the restricted two-arm witness to the FEX Poisson controller on the full depth-2 action space.
@@ -1071,6 +1138,7 @@ Reference answer: B
 ========================================================================
 
 case_067
+Project record: snapshots/fex-search-complexity/f307b961e51123d961ff9438bf4353f576f879bc.tar.zst
 
 Option A
 Goal: Measure whether marginal-dominance forecasts match FEX controller search traces.
@@ -1087,6 +1155,7 @@ Reference answer: A
 ========================================================================
 
 case_068
+Project record: snapshots/fex-search-complexity/2e495058ef36bd5cb94e78511789d09b1ee27407.tar.zst
 
 Option A
 Goal: State a class-exposure lower bound and a link from that bound to two-action policy-gradient geometry.
@@ -1103,6 +1172,7 @@ Reference answer: B
 ========================================================================
 
 case_069
+Project record: snapshots/fex-search-complexity/3d09fd5bce85f8f3884b6cd3ce8d52ca2724fb7e.tar.zst
 
 Option A
 Goal: Prove the class-exposure bound and the G2 to G3 bridge for the FEX depth-2 nine-operator grammar.
@@ -1119,6 +1189,7 @@ Reference answer: B
 ========================================================================
 
 case_070
+Project record: snapshots/fex-synchro-prior/e08bfd333762ccef56387f54aff269ebc7882af1.tar.zst
 
 Option A
 Goal: Test the frequency prior on the current single-frequency Helmholtz and convection-diffusion problems.
@@ -1135,6 +1206,7 @@ Reference answer: B
 ========================================================================
 
 case_071
+Project record: snapshots/hybrid-scaling-decomp/43f413d5f3b5e02857b752aaaf05401f0caec53a.tar.zst
 
 Option A
 Goal: Measure the paired AIC gap at one large-n cell on the R35 prediction line.
@@ -1151,6 +1223,7 @@ Reference answer: A
 ========================================================================
 
 case_072
+Project record: snapshots/hybrid-scaling-decomp/6c1ed0c559df2d7ded57bd5b899f912464a2479b.tar.zst
 
 Option A
 Goal: Check the R35 power-law prediction with the gap=0.18 cell at n=4096 as a paired primary-versus-fallback test.
@@ -1167,6 +1240,7 @@ Reference answer: B
 ========================================================================
 
 case_073
+Project record: snapshots/hybrid-scaling-decomp/b8ff3cc34e24c507be907cc427d399a7f6c0c274.tar.zst
 
 Option A
 Goal: Use the label-swap fallback as the main estimand and take finite-n magnitude from the R29, R34, and R42 cells.
@@ -1183,6 +1257,7 @@ Reference answer: B
 ========================================================================
 
 case_074
+Project record: snapshots/hybrid-scaling-decomp/65c62897cba714b4dfb132b0b74d4337cf1318cb.tar.zst
 
 Option A
 Goal: Measure the paired primary and label-swap AIC delta at gap 0.18, sigma 0.003, and n=2048, then send Version 6.
@@ -1199,6 +1274,7 @@ Reference answer: B
 ========================================================================
 
 case_075
+Project record: snapshots/kaggle-biohub/4250c66b1c8a4a5f2f51ac38601674991ffef7af.tar.zst
 
 Option A
 Goal: Measure current methods on the hidden test by using the five daily Kaggle submissions.
@@ -1215,6 +1291,7 @@ Reference answer: A
 ========================================================================
 
 case_076
+Project record: snapshots/kaggle-biohub/2d3cf6034e6424c5f78d50233a02b004e437fa7d.tar.zst
 
 Option A
 Goal: Retrain the public TemporalUNet3D, Node Transformer, and ILP pipeline in five-epoch segments on the first embryo-held-out fold to obtain a matched public baseline.
@@ -1231,6 +1308,7 @@ Reference answer: A
 ========================================================================
 
 case_077
+Project record: snapshots/kaggle-biohub/7a27bc6b5e04a86ed6705acc0db5424c798ece2d.tar.zst
 
 Option A
 Goal: Measure how synthetic root hubs and off-volume forks change the hidden Kaggle score with the rest of today's submission slots.
@@ -1247,6 +1325,7 @@ Reference answer: B
 ========================================================================
 
 case_078
+Project record: snapshots/kaggle-biohub/c1b3c7837ea963513d01a2bbd2b4766503d02499.tar.zst
 
 Option A
 Goal: Measure the association quality of the clean public-architecture retrain and continue that training for five more epochs.
@@ -1263,6 +1342,7 @@ Reference answer: B
 ========================================================================
 
 case_079
+Project record: snapshots/kaggle-biohub/ae78d5fe1d58f85f1d9d4acd106f0cedb038d570.tar.zst
 
 Option A
 Goal: Continue self-training of the public architecture and use the next hidden submissions for the current 0.877 pipeline.
@@ -1279,6 +1359,7 @@ Reference answer: B
 ========================================================================
 
 case_080
+Project record: snapshots/kaggle-biohub/9531d77c7cdfcd97941ab9e12a1258754b484fb0.tar.zst
 
 Option A
 Goal: Measure whether the public checkpoint with TTA, ILP, and the extra post-processing steps reaches the 0.913 leaderboard cluster on hidden test.
@@ -1295,6 +1376,7 @@ Reference answer: B
 ========================================================================
 
 case_081
+Project record: snapshots/kaggle-biohub/eb838d351ff66ef27b81eb8be13dbec76da88b3c.tar.zst
 
 Option A
 Goal: Identify the public notebook method that scores 0.913 to 0.914 on the leaderboard and reproduce it on hidden data.
@@ -1311,6 +1393,7 @@ Reference answer: A
 ========================================================================
 
 case_082
+Project record: snapshots/kaggle-biohub/54d588372ff575b803acecfacddfb5a7804927ea.tar.zst
 
 Option A
 Goal: Find how much of the 0.028 score gap to the 0.908 public fork comes from the motion-relink and safe-division kernels that are already built.
@@ -1327,6 +1410,7 @@ Reference answer: B
 ========================================================================
 
 case_083
+Project record: snapshots/kaggle-biohub/139d891719d22c825309b16f78f56bc35c94be40.tar.zst
 
 Option A
 Goal: Measure an anisotropic 3D U-Net, a windowed association Transformer, and an Ultrack cue tracker on one split and the official metric.
@@ -1343,6 +1427,7 @@ Reference answer: A
 ========================================================================
 
 case_084
+Project record: snapshots/kaggle-biohub/c735ac1575ed66cbb63caeb8e0b166109542716f.tar.zst
 
 Option A
 Goal: Send five prepared hidden submissions at the start of the quota day.
@@ -1359,6 +1444,7 @@ Reference answer: B
 ========================================================================
 
 case_085
+Project record: snapshots/kaggle-biohub/173332b79a4793d657b4f473cc3c642a4f633da8.tar.zst
 
 Option A
 Goal: Set the next round of route experiments on the existing train4 and dev4 split.
@@ -1375,6 +1461,7 @@ Reference answer: A
 ========================================================================
 
 case_086
+Project record: snapshots/kaggle-biohub/7acac7122cf7c23f351d2d615ded18f6bfa3b8bc.tar.zst
 
 Option A
 Goal: Test whether a voxel PU objective improves the anisotropic 3D U-Net over the dense control.
@@ -1391,6 +1478,7 @@ Reference answer: B
 ========================================================================
 
 case_087
+Project record: snapshots/kaggle-biohub/7acac7122cf7c23f351d2d615ded18f6bfa3b8bc.tar.zst
 
 Option A
 Goal: Find the first source of the parent-score gap, and test whether legal binary nnPU beats same-host dense BCE on the anisotropic 3D U-Net.
@@ -1407,6 +1495,7 @@ Reference answer: B
 ========================================================================
 
 case_088
+Project record: snapshots/kaggle-biohub/2c2abd8aa7d7692e75b446db75600bd2ac494bdf.tar.zst
 
 Option A
 Goal: Continue the 0.913 system, the traditional detector, and the U-Net as three routes, and split the daily Kaggle slots across those routes.
@@ -1423,6 +1512,7 @@ Reference answer: A
 ========================================================================
 
 case_089
+Project record: snapshots/kaggle-biohub/0a2a87f9304e39fd61b170c331e7f4792af90831.tar.zst
 
 Option A
 Goal: Choose the next T and V hidden packages from the notebook driver code in the repository.
@@ -1439,6 +1529,7 @@ Reference answer: A
 ========================================================================
 
 case_090
+Project record: snapshots/kaggle-biohub/0a7003caa20a0814afdbb7578ecbe55060a07175.tar.zst
 
 Option A
 Goal: Raise the current 0.913 Kaggle score by testing association changes and by getting official readings on the U and V routes.
@@ -1455,6 +1546,7 @@ Reference answer: A
 ========================================================================
 
 case_091
+Project record: snapshots/kaggle-biohub/c2aa98a36897367bc6e9d499d096bb0e7e37cf74.tar.zst
 
 Option A
 Goal: Measure the official score of an anisotropic 3D U-Net with channels 32, 64, and 128 against the traditional LoG detector.
@@ -1471,6 +1563,7 @@ Reference answer: A
 ========================================================================
 
 case_092
+Project record: snapshots/kaggle-biohub/c2aa98a36897367bc6e9d499d096bb0e7e37cf74.tar.zst
 
 Option A
 Goal: Train a U-Net detector that has higher official and raw-edge scores than the traditional detector on the same local split.
@@ -1487,6 +1580,7 @@ Reference answer: A
 ========================================================================
 
 case_093
+Project record: snapshots/kaggle-biohub/483037754c94452f0abaf84616cd7b9498790986.tar.zst
 
 Option A
 Goal: Find out whether an ILP division-topology change is still present in the graph that the official metric scores.
@@ -1503,6 +1597,7 @@ Reference answer: A
 ========================================================================
 
 case_094
+Project record: snapshots/kaggle-biohub/9c7c51b881963eba7c28d658692118f81df1fc74.tar.zst
 
 Option A
 Goal: Get official and raw scores for the two mainline single-factor cards on the four visible samples that have local ground truth.
@@ -1519,6 +1614,7 @@ Reference answer: A
 ========================================================================
 
 case_095
+Project record: snapshots/kaggle-biohub/bda7fe6c3e404dadfb54756ed0790c84778bb58e.tar.zst
 
 Option A
 Goal: Judge the size of the new R79 improvements and choose which interventions to turn into visible packages.
@@ -1535,6 +1631,7 @@ Reference answer: A
 ========================================================================
 
 case_096
+Project record: snapshots/kaggle-rogii/a84b9813a4895b8a431322c7cbfa0b6eee4dd796.tar.zst
 
 Option A
 Goal: Choose the next particle-filter experiment from the hidden score of the 500-particle 192-seed config.
@@ -1551,6 +1648,7 @@ Reference answer: B
 ========================================================================
 
 case_097
+Project record: snapshots/kaggle-rogii/578646b15ac5a78cc1a0b6a0e8521170fe48a185.tar.zst
 
 Option A
 Goal: Score the current particle-filter and GBDT candidates on the current leaderboard, and start the next local runs after those scores are known.
@@ -1567,6 +1665,7 @@ Reference answer: B
 ========================================================================
 
 case_098
+Project record: snapshots/kaggle-rogii/ff898786230f419495665a12c64fdb5bc902cd77.tar.zst
 
 Option A
 Goal: Measure whether F-Path-CFM and A-Track-Pointer beat the particle-filter selector on sealed fold 0.
@@ -1583,6 +1682,7 @@ Reference answer: A
 ========================================================================
 
 case_099
+Project record: snapshots/kaggle-rogii/f57f74e23829d82d2506eddd11da7835d65f703c.tar.zst
 
 Option A
 Goal: Test a whole-well two-dimensional alignment model on fold 0 as the next attempt to move about 2000 leaderboard ranks.
@@ -1599,6 +1699,7 @@ Reference answer: A
 ========================================================================
 
 case_100
+Project record: snapshots/looped-lora/2e9c2b54c364129df0691bae911bc2477fa9b906.tar.zst
 
 Option A
 Goal: Test whether jointly training the Rep-Translator and the shared LoRA can produce a K>1 depth gain.
@@ -1615,6 +1716,7 @@ Reference answer: B
 ========================================================================
 
 case_101
+Project record: snapshots/looped-lora/adbc14c0971b417b50c3a74c7a2e0988bc0aa006.tar.zst
 
 Option A
 Goal: Test whether a representation translator with no LoRA can map loop-exit states back to usable loop-entry states.
@@ -1631,6 +1733,7 @@ Reference answer: A
 ========================================================================
 
 case_102
+Project record: snapshots/looped-lora/367567151930f54877d656f4716fda852f08e94b.tar.zst
 
 Option A
 Goal: Build the SFT pilot with a SWE slice of 2,000 unique issue groups.
@@ -1647,6 +1750,7 @@ Reference answer: B
 ========================================================================
 
 case_103
+Project record: snapshots/looped-lora/dc1ec8645b559540ffc5b08bac62b75cb6fabf8b.tar.zst
 
 Option A
 Goal: Jointly train Rep-Translator and shared LoRA on the four interfaces after the translator-only warm-up.
@@ -1663,6 +1767,7 @@ Reference answer: B
 ========================================================================
 
 case_104
+Project record: snapshots/looped-lora/260700854f0d91f96d1b4937b7cb770d80ee0368.tar.zst
 
 Option A
 Goal: Find out whether extra loop depth raises scores on the development and preservation benchmarks for the two-step routes.
@@ -1679,6 +1784,7 @@ Reference answer: A
 ========================================================================
 
 case_105
+Project record: snapshots/looped-lora/e7907dd8f073f890fe983431a0b6b2caef9e2175.tar.zst
 
 Option A
 Goal: Repair the panel scorer and then test one candidate on a small real-task set for a positive depth effect.
@@ -1695,6 +1801,7 @@ Reference answer: A
 ========================================================================
 
 case_106
+Project record: snapshots/looped-lora/09179a38d1851569a692fd72ea09061cbaddea6e.tar.zst
 
 Option A
 Goal: Measure whether one depth candidate gains from extra recurrence steps on a small real-task split.
@@ -1711,6 +1818,7 @@ Reference answer: A
 ========================================================================
 
 case_107
+Project record: snapshots/looped-lora/09179a38d1851569a692fd72ea09061cbaddea6e.tar.zst
 
 Option A
 Goal: Measure whether the current two-step routes beat K=1 on the full real-task panel.
@@ -1727,6 +1835,7 @@ Reference answer: B
 ========================================================================
 
 case_108
+Project record: snapshots/looped-lora/56d121fb63110296c57b1d8d46153b18999f96a6.tar.zst
 
 Option A
 Goal: Test whether extra recurrence depth helps after one change to training support, loop input, or loss, then score one passing model on a small real-task set.
@@ -1743,6 +1852,7 @@ Reference answer: A
 ========================================================================
 
 case_109
+Project record: snapshots/looped-lora/a46c3c9a484549ce6c6161098b6b3ac042d7dcc9.tar.zst
 
 Option A
 Goal: Test whether a stronger loop-count input to the Translator can improve extra-loop next-token loss under the G20 depth-grid K schedule.
@@ -1759,6 +1869,7 @@ Reference answer: B
 ========================================================================
 
 case_110
+Project record: snapshots/looped-lora/68c41616d45fdf4f654bc29d729b46be8a5379c7.tar.zst
 
 Option A
 Goal: Record training and inference MFU on the formal G26b config and continue B3 and B4 from the existing checkpoints.
@@ -1775,6 +1886,7 @@ Reference answer: A
 ========================================================================
 
 case_111
+Project record: snapshots/looped-lora/7593638aa33b31283cf3f203d60cc1f0408de6e9.tar.zst
 
 Option A
 Goal: Build a four-class real-task development set whose Base-K1 accuracy is about 50 percent.
@@ -1791,6 +1903,7 @@ Reference answer: B
 ========================================================================
 
 case_112
+Project record: snapshots/looped-lora/7b212c20898579f03a3ce2e866bbb20c48f7aef9.tar.zst
 
 Option A
 Goal: Count the finished G26 curriculum arms as comparison endpoints, then run the four-class real-task selector.
@@ -1807,6 +1920,7 @@ Reference answer: B
 ========================================================================
 
 case_113
+Project record: snapshots/looped-lora/42b660a5a358539b5bd7fa4ae0a55f36235ef12b.tar.zst
 
 Option A
 Goal: Decide how the 30 percent MFU gate applies to multi-GPU training and mixed precision, and take the next training measurement.
@@ -1823,6 +1937,7 @@ Reference answer: B
 ========================================================================
 
 case_114
+Project record: snapshots/looped-lora/5767dbbd3668aafb43a69678c1ac91e1990303a8.tar.zst
 
 Option A
 Goal: Determine how to pass the 30 percent training and inference MFU requirement.
@@ -1839,6 +1954,7 @@ Reference answer: A
 ========================================================================
 
 case_115
+Project record: snapshots/looped-lora/6582b37d0b472a1d90e57fe4d3a9b1bbe11feaba.tar.zst
 
 Option A
 Goal: Decide whether any of 0.8B, 2B, or 4B meets the training and inference MFU requirement, then choose the size with the shortest total training time.
@@ -1855,6 +1971,7 @@ Reference answer: A
 ========================================================================
 
 case_116
+Project record: snapshots/looped-lora/6582b37d0b472a1d90e57fe4d3a9b1bbe11feaba.tar.zst
 
 Option A
 Goal: Decide how the 30 percent MFU code gate is tested on the 0.8B, 2B, and 4B models after G40.
@@ -1871,6 +1988,7 @@ Reference answer: A
 ========================================================================
 
 case_117
+Project record: snapshots/looped-lora/c1865dbac37832afee32808a76660a7d5bcac2b1.tar.zst
 
 Option A
 Goal: Test whether extra recurrence depth improves quality when training covers every depth from K=1 through K=8.
@@ -1887,6 +2005,7 @@ Reference answer: A
 ========================================================================
 
 case_118
+Project record: snapshots/looped-lora/02836589a6dbb39ae81d465acd1b32a342bdd669.tar.zst
 
 Option A
 Goal: Measure training and inference MFU for the 0.8B, 2B, and 4B models at K equals 1, 2, and 4 on a 16-update workload, and then score the six-cell MFU gate on those measurements.
@@ -1903,6 +2022,7 @@ Reference answer: A
 ========================================================================
 
 case_119
+Project record: snapshots/looped-lora/d31877d3879600c3895a2cae3b3a27af4f143d35.tar.zst
 
 Option A
 Goal: Set the training optimizer after the physical batch size is chosen.
@@ -1919,6 +2039,7 @@ Reference answer: A
 ========================================================================
 
 case_120
+Project record: snapshots/looped-lora/f9e69e62502eedd0efe8e75b7e8e1dedbcc5bd5d.tar.zst
 
 Option A
 Goal: Set the experiment size to 4B from the six-cell 25 percent engineering pass and start the 4B 10,528-step matched-call quality pipeline.
@@ -1935,6 +2056,7 @@ Reference answer: B
 ========================================================================
 
 case_121
+Project record: snapshots/looped-lora/014d03f6bd46aaf58971eeac2b03bbc78aa5311b.tar.zst
 
 Option A
 Goal: Finish the real-task tier asset after the 0.8B Base-K1 calibration stopped at 8 of 12 cells.
@@ -1951,6 +2073,7 @@ Reference answer: A
 ========================================================================
 
 case_122
+Project record: snapshots/looped-lora/60bf2606e3d44c161c4de289e66f24898910e6e1.tar.zst
 
 Option A
 Goal: Obtain the remaining 22x scale readout and the matched-call K=1 through K=8 curriculum readout.
@@ -1967,6 +2090,7 @@ Reference answer: A
 ========================================================================
 
 case_123
+Project record: snapshots/looped-lora/a5e8d3d19054bfd48f143719eda575ce64672a12.tar.zst
 
 Option A
 Goal: Measure whether ordinary LoRA trained on official MedMCQA train data improves MedMCQA accuracy at 5 tokens per LoRA parameter.
@@ -1983,6 +2107,7 @@ Reference answer: A
 ========================================================================
 
 case_124
+Project record: snapshots/muon-mp-spectrum/2940324bcf1c7f0ebd6a017f51df18a32221c477.tar.zst
 
 Option A
 Goal: Measure how close Muon-preprocessed training updates are to the Marchenko-Pastur spectrum, and collect published evidence for that claim.
@@ -1999,6 +2124,7 @@ Reference answer: A
 ========================================================================
 
 case_125
+Project record: snapshots/ocl-raghav/cb515c0b475332ff71f2c98ddc7c9bd942a3e494.tar.zst
 
 Option A
 Goal: Study selected-feasibility failures on the finished 8-benchmark screen and one Williams coverage repair.
@@ -2015,6 +2141,7 @@ Reference answer: B
 ========================================================================
 
 case_126
+Project record: snapshots/ocl-raghav/cb515c0b475332ff71f2c98ddc7c9bd942a3e494.tar.zst
 
 Option A
 Goal: Produce hard cells that can support a method-necessity claim under the 0.88 random-coverage threshold.
@@ -2031,6 +2158,7 @@ Reference answer: A
 ========================================================================
 
 case_127
+Project record: snapshots/ocl-raghav/a2322c8f654bbeb647735872b619421fa0e5ad9f.tar.zst
 
 Option A
 Goal: Find optimizer-selected feasibility failures on the eight existing benchmarks where cheap controls do not close the gap, and test selected-risk calibration and LLM-guided symbolic constraints as repairs.
@@ -2047,6 +2175,7 @@ Reference answer: A
 ========================================================================
 
 case_128
+Project record: snapshots/ocl-raghav/78b93cbb735dc8122f63c58496b5f9a73e3be0d9.tar.zst
 
 Option A
 Goal: Choose the next experiment after the Williams LLM-SR coverage rescue reported coverage min 0.8787.
@@ -2063,6 +2192,7 @@ Reference answer: A
 ========================================================================
 
 case_129
+Project record: snapshots/ocl-raghav/d1578e1e153e35049a9f21ba363fca5f359caaa9.tar.zst
 
 Option A
 Goal: Find whether a non-Williams target in the R38 selected-risk repair passes the per-seed strict test on the targets that already have complete calibration.
@@ -2079,6 +2209,7 @@ Reference answer: A
 ========================================================================
 
 case_130
+Project record: snapshots/ocl-raghav/f34f5810b539021315661de35b62f8a6d4046d1b.tar.zst
 
 Option A
 Goal: Decide the low-cost claim by comparing each selected row to the recorded 5 percent relative-cost rule.
@@ -2095,6 +2226,7 @@ Reference answer: B
 ========================================================================
 
 case_131
+Project record: snapshots/ocl-raghav/d5af7aca1155340cef9b17b6dc26868e2ecdade3.tar.zst
 
 Option A
 Goal: Measure selected feasibility on the eight-benchmark matrix with the linear OCL solver, and test a constant floor that uses the same proposal queries as the learned envelope.
@@ -2111,6 +2243,7 @@ Reference answer: B
 ========================================================================
 
 case_132
+Project record: snapshots/ocl-raghav/a1c422a622c62312d32e58b47fecd705e8d29f55.tar.zst
 
 Option A
 Goal: Obtain a repaired 54-unit R68b solver matrix on the 200-objective sample set for every unit.
@@ -2127,6 +2260,7 @@ Reference answer: A
 ========================================================================
 
 case_133
+Project record: snapshots/prc-real-prompt-delete-helps/49c18df8a5abac41a940d1b643709f3accdfe379.tar.zst
 
 Option A
 Goal: Measure the V8b deletion-help rates after prompt-level filters and build a multi-unit organic set with a ShareGPT chat-host arm.
@@ -2143,6 +2277,7 @@ Reference answer: A
 ========================================================================
 
 case_134
+Project record: snapshots/prc-real-prompt-delete-helps/288420c773e975715f6f7f1b031c714f174b6381.tar.zst
 
 Option A
 Goal: Produce the next V9 review package for the organic-prompt calibration study.
@@ -2159,6 +2294,7 @@ Reference answer: B
 ========================================================================
 
 case_135
+Project record: snapshots/prc-real-prompt-delete-helps/136955cadcb07eea6fc5b2bd7d6b9149a3eabed6.tar.zst
 
 Option A
 Goal: After the V12 not-ready review, run a V13 batch of three experiments over up to two days of wall time, then send one review, and keep the target venue as a choice among NeurIPS main, NeurIPS workshop, and stopping the project.
@@ -2175,6 +2311,7 @@ Reference answer: B
 ========================================================================
 
 case_136
+Project record: snapshots/prc-real-prompt-delete-helps/525ed44dec343b028e259c66f5a9f5e09026ef80.tar.zst
 
 Option A
 Goal: After the V14 review, wait for the user to choose a project path before any V15 experiment.
@@ -2191,6 +2328,7 @@ Reference answer: B
 ========================================================================
 
 case_137
+Project record: snapshots/rule-system-robot-control/cfccae54ada94c4ec37d0357da03a82025c170c3.tar.zst
 
 Option A
 Goal: Close the Stage 0 closeout gaps reported by the latest audit.
@@ -2207,6 +2345,7 @@ Reference answer: B
 ========================================================================
 
 case_138
+Project record: snapshots/rule-system-robot-control/487c4708dc46db90f63b78b7fd8798a221bbb1ec.tar.zst
 
 Option A
 Goal: Close the Stage-0 audit findings that remain after the v25 closeout.
@@ -2223,6 +2362,7 @@ Reference answer: B
 ========================================================================
 
 case_139
+Project record: snapshots/rule-system-robot-control/a5a92f418a153ea9835da70de41a89dc2fbbbd30.tar.zst
 
 Option A
 Goal: Collect the remaining public PPO wave2 cells by waiting for the current remote jobs to finish in launch order.
@@ -2239,6 +2379,7 @@ Reference answer: B
 ========================================================================
 
 case_140
+Project record: snapshots/rule-system-robot-control/2345aeddca5d0d9010e723b71ce2e97ca12edaa2.tar.zst
 
 Option A
 Goal: Test a four-stage Hopper hopping controller against standing-still tags and absolute-speed thresholds.
@@ -2255,6 +2396,7 @@ Reference answer: B
 ========================================================================
 
 case_141
+Project record: snapshots/rule-system-robot-control/e50bde3cec2ebf033d8a2cd701dbbdbf6b727b54.tar.zst
 
 Option A
 Goal: Begin S1 by scoring a Swimmer traveling-wave controller against a Swimmer PPO mean from the public Zoo recipe.
@@ -2271,6 +2413,7 @@ Reference answer: A
 ========================================================================
 
 case_142
+Project record: snapshots/rule-system-robot-control/61d5205a99c8646e5bb06c962c8c1f543c39372d.tar.zst
 
 Option A
 Goal: Build a humanoid motion-imitation benchmark so the explicit controller can be scored against a published tracking baseline on held-out motions.
@@ -2287,6 +2430,7 @@ Reference answer: B
 ========================================================================
 
 case_143
+Project record: snapshots/rule-system-robot-control/474de7ec230020b7635150a6f1720a1d53e6ebb3.tar.zst
 
 Option A
 Goal: Test whether a Hopper controller made of phase, joint-target, PD, and balance rules can keep Hopper from falling on new seeds.
@@ -2303,6 +2447,7 @@ Reference answer: A
 ========================================================================
 
 case_144
+Project record: snapshots/rule-system-robot-control/36e208f309100ce5a4df1abde28ef9343462e964.tar.zst
 
 Option A
 Goal: Reuse Walker2d environments across candidates and compare search methods on the contact-phase controller.
@@ -2319,6 +2464,7 @@ Reference answer: A
 ========================================================================
 
 case_145
+Project record: snapshots/rule-system-robot-control/197bb111bbfadbde536f0490cdcc3bb45bd506c2.tar.zst
 
 Option A
 Goal: Test whether a new hand-written Walker2d gait program can walk and raise return above the n90 baseline.
@@ -2335,6 +2481,7 @@ Reference answer: B
 ========================================================================
 
 case_146
+Project record: snapshots/rule-system-robot-control/5a80e8e73e54e5b976e2fed99d8b05d2c36657a7.tar.zst
 
 Option A
 Goal: After the recent negative Walker2d speed families and the Hopper semantic-capacity scout, set the next work to a new return target or a new action interface.
@@ -2351,6 +2498,7 @@ Reference answer: B
 ========================================================================
 
 case_147
+Project record: snapshots/sequential-pinn/74431bcd7961031e64f75e95ad4c0676a57bdb0f.tar.zst
 
 Option A
 Goal: Run a ResNet depth ladder and MLP and PirateNets pilots as the next experiments, and close the five unfinished n=6 pairs.
@@ -2367,6 +2515,7 @@ Reference answer: B
 ========================================================================
 
 case_148
+Project record: snapshots/sequential-pinn/3e836c524c48cc97e63e9aea3f676d4e3813b656.tar.zst
 
 Option A
 Goal: Measure whether staged training or direct training attains the lower L2RE when each method searches its own training hyperparameters.
@@ -2383,6 +2532,7 @@ Reference answer: B
 ========================================================================
 
 case_149
+Project record: snapshots/sequential-pinn/7623f8f122b145aade22cdfa0ffef1d1b99437b4.tar.zst
 
 Option A
 Goal: Choose the next experiment after the Layer-1 Optuna studies on Poisson2D_Classic and Heat2D_VC.
@@ -2399,6 +2549,7 @@ Reference answer: B
 ========================================================================
 
 case_150
+Project record: snapshots/sequential-pinn/ee04eaad5b9a8fbfa61b1ce10e73499b72c25f62.tar.zst
 
 Option A
 Goal: Test whether the L1B Optuna recipe can give staged training a lower L2RE than direct training on the five PDEs that currently favor direct training.
@@ -2415,6 +2566,7 @@ Reference answer: B
 ========================================================================
 
 case_151
+Project record: snapshots/sequential-pinn/8542985046a249f49cd28f77106d1efeec28f8a4.tar.zst
 
 Option A
 Goal: Continue Step-3 hyperparameter search on Poisson2D_Classic and Heat2D_VaryingCoef after round 2 found a new high learning-rate basin at 5k steps.
@@ -2431,6 +2583,7 @@ Reference answer: A
 ========================================================================
 
 case_152
+Project record: snapshots/sequential-pinn/a47c2b729ba93d83ffb02df6231a65c80fdf4fdb.tar.zst
 
 Option A
 Goal: Get a 20k-iteration staged error for vanilla MLP on Poisson2D_Classic and on Heat2D_VaryingCoef.
@@ -2447,6 +2600,7 @@ Reference answer: A
 ========================================================================
 
 case_153
+Project record: snapshots/sequential-pinn/d682d0f534b7527eb857b6cd8f575ab5cd1daaa1.tar.zst
 
 Option A
 Goal: Measure staged and direct L2RE at ResNet depths 12 and 24 on Poisson2D_Classic and Heat2D_VaryingCoef, and at depth 6 on three other PDE families.
@@ -2463,6 +2617,7 @@ Reference answer: A
 ========================================================================
 
 case_154
+Project record: snapshots/sequential-pinn/c99b62f3aab37c039322739acf0cb0a05234a62f.tar.zst
 
 Option A
 Goal: Measure the locked Poisson ResNet staged run on extra seeds, then test staged training on PirateNets.
@@ -2479,6 +2634,7 @@ Reference answer: B
 ========================================================================
 
 case_155
+Project record: snapshots/sequential-pinn/fe3d567f6788c68c3a547068a07363d2054b0e4d.tar.zst
 
 Option A
 Goal: Collect a staged-versus-direct result for Poisson2D_Classic on the PINNacle setup-B ResNet with 6 layers.
@@ -2495,6 +2651,7 @@ Reference answer: A
 ========================================================================
 
 case_156
+Project record: snapshots/sequential-pinn/df01ab86ac1a43f96bf99850f071ba083b47c3d5.tar.zst
 
 Option A
 Goal: Map the Poisson2D_Classic staged hyperparameter landscape under the PINNacle BC=1 setup.
@@ -2511,6 +2668,7 @@ Reference answer: A
 ========================================================================
 
 case_157
+Project record: snapshots/sequential-pinn/d92f2931800a7f399a6020d819e50595fc9100f0.tar.zst
 
 Option A
 Goal: Search MLP Poisson again after the last MLP Heat staged run, and start ResNet on four missing PDEs, using earlier same-PDE runs to set the search box.
@@ -2527,6 +2685,7 @@ Reference answer: A
 ========================================================================
 
 case_158
+Project record: snapshots/sequential-pinn/431f883c5eda8398eb6def475dd1f9205209b697.tar.zst
 
 Option A
 Goal: Take the next ResNet PINNacle step as one 6-hour slice of four cells, then read the results before planning more cells.
@@ -2543,6 +2702,7 @@ Reference answer: A
 ========================================================================
 
 case_159
+Project record: snapshots/sequential-pinn/2d4196f02430d5224a454933c544795d3f09576b.tar.zst
 
 Option A
 Goal: Decide the next step for cells where staged error is still above direct error after the three-backbone PINNacle grid.
@@ -2559,6 +2719,7 @@ Reference answer: A
 ========================================================================
 
 case_160
+Project record: snapshots/sequential-pinn/2efb1404796db5d810e3d8622fce1863d3e6690a.tar.zst
 
 Option A
 Goal: Run the five-hyperparameter shared-stage setting on all three backbones of Burgers2D, PoissonND, and NS2D_BackStep.
@@ -2575,6 +2736,7 @@ Reference answer: A
 ========================================================================
 
 case_161
+Project record: snapshots/sequential-pinn/b23cf67457c23dea4ecce74b5e1120435def95b7.tar.zst
 
 Option A
 Goal: Write the paper from the 69-cell 5-hp grid and the V78 cross-backbone transfer result.
@@ -2591,6 +2753,7 @@ Reference answer: B
 ========================================================================
 
 case_162
+Project record: snapshots/sequential-pinn/3f4553f12ef2ac317b3633794fec2817c19f18f0.tar.zst
 
 Option A
 Goal: Write a paper from the 69-cell five-hyperparameter seed-0 grid and the PoissonND hyperparameter transfer.
@@ -2607,6 +2770,7 @@ Reference answer: B
 ========================================================================
 
 case_163
+Project record: snapshots/sequential-pinn/88dc6bbb96f7f135113e8663dcb43799a84113c2.tar.zst
 
 Option A
 Goal: Test whether progressive staged training on Poisson2D Classic gets better as K increases from 2 to 4.
@@ -2623,6 +2787,7 @@ Reference answer: A
 ========================================================================
 
 case_164
+Project record: snapshots/sequential-pinn/ea635dc63d580b6a749e681b22356355968da014.tar.zst
 
 Option A
 Goal: Read the three-backbone depth result from K-loss and step-loss figures on the existing Poisson-2D Classic trials.
@@ -2639,6 +2804,7 @@ Reference answer: A
 ========================================================================
 
 case_165
+Project record: snapshots/sequential-pinn/85a5836160d0aa1eb34fb4e6bd1b881b2eaba0fb.tar.zst
 
 Option A
 Goal: Continue the Poisson2D_Classic repair work after the six loss figures.
@@ -2655,6 +2821,7 @@ Reference answer: B
 ========================================================================
 
 case_166
+Project record: snapshots/sequential-pinn/00391a239d6d58d03e4a2e1645bc8bd1076b5c1c.tar.zst
 
 Option A
 Goal: Select hard PDEs on which K=1 fails and K=2 improves but remains large.
@@ -2671,6 +2838,7 @@ Reference answer: A
 ========================================================================
 
 case_167
+Project record: snapshots/sequential-pinn/5fd412790cf85431566b7324d09a2d299f88ca51.tar.zst
 
 Option A
 Goal: Measure whether the reported SDT gain comes from optimizer restart or from shallow initialization, and pass a post-growth loss recovery test before LongTime staged training.
@@ -2687,6 +2855,7 @@ Reference answer: B
 ========================================================================
 
 case_168
+Project record: snapshots/sequential-pinn/fa479d854d4e9b33c61009a703a0e53a09f7ac72.tar.zst
 
 Option A
 Goal: Test whether current_reset growth on Heat2D_LongTime and NS2D_LongTime recovers a lower objective after the network is deepened.
@@ -2703,6 +2872,7 @@ Reference answer: B
 ========================================================================
 
 case_169
+Project record: snapshots/sequential-pinn/bb3369cf0ea75c9c455bcc52eac8748fee442591.tar.zst
 
 Option A
 Goal: Get K-staged L2RE curves on Heat2D_LongTime and NS2D_LongTime for MLP and PirateNets.
@@ -2719,6 +2889,7 @@ Reference answer: B
 ========================================================================
 
 case_170
+Project record: snapshots/sequential-pinn/bee799da830fa1b9c2d164acd7a080ae0fb164a9.tar.zst
 
 Option A
 Goal: Compare staged depth training and vanilla training on Heat 2D varying coefficient and Poisson-Boltzmann 2D as the network grows by three-layer blocks.
@@ -2735,6 +2906,7 @@ Reference answer: A
 ========================================================================
 
 case_171
+Project record: snapshots/sequential-pinn/bee799da830fa1b9c2d164acd7a080ae0fb164a9.tar.zst
 
 Option A
 Goal: Test whether adding more stages lowers error on Heat 2D with varying coefficient and Poisson-Boltzmann 2D.
@@ -2751,6 +2923,7 @@ Reference answer: A
 ========================================================================
 
 case_172
+Project record: snapshots/sequential-pinn/d4abd285932b5f70e977533b26069efb8f5db383.tar.zst
 
 Option A
 Goal: Measure staged-depth training and vanilla training from depth 3 to depth 15 on Heat2D-VaryingCoeff and Poisson-Boltzmann2D.
@@ -2767,6 +2940,7 @@ Reference answer: B
 ========================================================================
 
 case_173
+Project record: snapshots/sequential-pinn/3d2f1ab4b8b9d9c1434f96d3b94dfe656876a1f7.tar.zst
 
 Option A
 Goal: Add a second PB2D staged hyperparameter search so that L2RE falls as K grows and the reused K=2 point sits on the K=1 to K=3 line.
@@ -2783,6 +2957,7 @@ Reference answer: B
 ========================================================================
 
 case_174
+Project record: snapshots/sequential-pinn/db5c9bb40db7feec227aaaf604b00ee797d1b223.tar.zst
 
 Option A
 Goal: Find hyperparameters for K-stage MLP training on Poisson-Boltzmann 2D at K=1, 3, 4, and 5.
@@ -2799,6 +2974,7 @@ Reference answer: B
 ========================================================================
 
 case_175
+Project record: snapshots/sequential-pinn/e02f337fb1eb930a2887c06dfdf8708ec55ee057.tar.zst
 
 Option A
 Goal: Measure the deeper-K effect on three new PDEs and on two extra random seeds.
@@ -2815,6 +2991,7 @@ Reference answer: B
 ========================================================================
 
 case_176
+Project record: snapshots/sequential-pinn/e02f337fb1eb930a2887c06dfdf8708ec55ee057.tar.zst
 
 Option A
 Goal: Extend the deeper-K grid to three new PDEs and three random seeds.
@@ -2831,6 +3008,7 @@ Reference answer: B
 ========================================================================
 
 case_177
+Project record: snapshots/sequential-pinn/ef60e125b1ab98743fd05ede4c57583529bccdbe.tar.zst
 
 Option A
 Goal: Improve the Heat2D_ComplexGeometry log-log depth fit using the three depths n=6, n=9, and n=15.
@@ -2847,6 +3025,7 @@ Reference answer: B
 ========================================================================
 
 case_178
+Project record: snapshots/sequential-pinn/c0ae466e5a284cf65d471fd10d590bdbef74c856.tar.zst
 
 Option A
 Goal: Search PoissonBoltzmann2D at K=3, K=4, and K=5 together, and add H2DCG K=4 plus more K=3 and K=5 trials, to raise staged log-log R² to 0.98 or higher.
@@ -2863,6 +3042,7 @@ Reference answer: A
 ========================================================================
 
 case_179
+Project record: snapshots/sequential-pinn/184ac115c31fe90f89e8aef4190e2c0d3da08c60.tar.zst
 
 Option A
 Goal: Raise the PoissonBoltzmann2D SDT log-log R² after the latest collected K-grid batch.
@@ -2879,6 +3059,7 @@ Reference answer: B
 ========================================================================
 
 case_180
+Project record: snapshots/sequential-pinn/8bc93cdfa38210ae32bcf4d7852ad52b37d886ea.tar.zst
 
 Option A
 Goal: Continue the deeper-K study so that SDT log-log R² on Poisson-Boltzmann 2D and Heat2D CG can reach 0.98.
@@ -2895,6 +3076,7 @@ Reference answer: A
 ========================================================================
 
 case_181
+Project record: snapshots/sequential-pinn/4babbd7be5ca60dbc55b2732562e8dbc01c3ca9e.tar.zst
 
 Option A
 Goal: Search PoissonBoltzmann2D MLP staged-depth training at K=5, and measure Heat2D_ComplexGeometry at K=1 with final depth 3.
@@ -2911,6 +3093,7 @@ Reference answer: A
 ========================================================================
 
 case_182
+Project record: snapshots/sequential-pinn/f699edbc3d3bd714cc428240f99ece1429a99409.tar.zst
 
 Option A
 Goal: Analyze the Heat2D_ComplexGeometry K-grid when TG-G has eight terminal cells, and continue TG-J and TG-K as a second PoissonBoltzmann2D experiment.
@@ -2927,6 +3110,7 @@ Reference answer: A
 ========================================================================
 
 case_183
+Project record: snapshots/sequential-pinn/736a09482597f74c61b79504d7cbe3eb598f5f74.tar.zst
 
 Option A
 Goal: Bring Heat2D complex-geometry log-log R² to 0.98 on the staged-training depth grid.
@@ -2943,6 +3127,7 @@ Reference answer: A
 ========================================================================
 
 case_184
+Project record: snapshots/sequential-pinn/6631d446efa52582b6f4071cffa943b243865612.tar.zst
 
 Option A
 Goal: Find PoissonND ResNet SDT and PirateNets SDT hyperparameters that beat the existing vanilla L2RE.
@@ -2959,6 +3144,7 @@ Reference answer: B
 ========================================================================
 
 case_185
+Project record: snapshots/sequential-pinn/749cce94719d40a3d70eb125ab134eae3dd4f0a7.tar.zst
 
 Option A
 Goal: Continue hyperparameter search on Heat2D_ComplexGeometry for MLP and PirateNets so that SDT and vanilla each have 30 trials at every K.
@@ -2975,6 +3161,7 @@ Reference answer: B
 ========================================================================
 
 case_186
+Project record: snapshots/sequential-pinn/7ed2e778b7e9e2bcdd79cb578ba371b5be229c76.tar.zst
 
 Option A
 Goal: Bring Gray-Scott MLP, Gray-Scott PirateNets, and Burgers 1D ResNet staged training below the current vanilla error of each cell.
@@ -2991,6 +3178,7 @@ Reference answer: A
 ========================================================================
 
 case_187
+Project record: snapshots/sequential-pinn/d4aaee2f373bddce55b6999194719f3904483ba2.tar.zst
 
 Option A
 Goal: Decide the status of Burgers1D ResNet sequential fine-tuning after the first 10-trial rescue search.
@@ -3007,6 +3195,7 @@ Reference answer: B
 ========================================================================
 
 case_188
+Project record: snapshots/sequential-pinn/febf67a8dabb5fdea2629c537342b4fc318ce549.tar.zst
 
 Option A
 Goal: Decide the next step for Burgers1D ResNet staged-depth training after three 10-trial rescue batches.
@@ -3023,6 +3212,7 @@ Reference answer: B
 ========================================================================
 
 case_189
+Project record: snapshots/sequential-pinn/1d48feef8462c5d6ee1efc0bf044887e6038953d.tar.zst
 
 Option A
 Goal: Measure Burgers1D ResNet staged depth training L2RE against the seed-0 vanilla value 0.012891.
@@ -3039,6 +3229,7 @@ Reference answer: B
 ========================================================================
 
 case_190
+Project record: snapshots/soft-support-bfm/dcc050081d9bd2bf3189e1bb7fc3f1fe5bef2505.tar.zst
 
 Option A
 Goal: Fit the current support model on trampoline-only external targets while mattress files wait on official access.
@@ -3055,6 +3246,7 @@ Reference answer: B
 ========================================================================
 
 case_191
+Project record: snapshots/soft-support-bfm/71391a56693f56e0e52debf6808e6c7fbd1e97e5.tar.zst
 
 Option A
 Goal: Train a small neural network that maps person and pose information to mattress pressure maps, then evaluate that network on held-out SLP subjects.
@@ -3071,6 +3263,7 @@ Reference answer: A
 ========================================================================
 
 case_192
+Project record: snapshots/soft-support-bfm/d337cc32596956c006c7f548deaebbda9a677e83.tar.zst
 
 Option A
 Goal: Set the next mattress evidence after public PmatData is confirmed to have no per-subject body shape.
@@ -3087,6 +3280,7 @@ Reference answer: B
 ========================================================================
 
 case_193
+Project record: snapshots/soft-support-bfm/31f1fa1337861fe9d8a6ef47a06553991f03276b.tar.zst
 
 Option A
 Goal: Change the SLP pressure-map evaluation from held-out-person prediction to a same-person or same-mattress protocol.
@@ -3103,6 +3297,7 @@ Reference answer: B
 ========================================================================
 
 case_194
+Project record: snapshots/soft-support-bfm/253231a0a269edd1dc1ab1366679f57681b6b3b2.tar.zst
 
 Option A
 Goal: Test whether learned pose, body-shape, and body-mass inputs, when passed through the mattress physics solver, reproduce held-out SLP pressure maps on gauge-free NRMSE.
@@ -3119,6 +3314,7 @@ Reference answer: A
 ========================================================================
 
 case_195
+Project record: snapshots/soft-support-bfm/c51af0d1497f4750ae5d8a45d2c815589c075131.tar.zst
 
 Option A
 Goal: Get mass, load, and geometry for the solver by requesting those fields from the SLP, PmatData, and BodyMAP authors.
@@ -3135,6 +3331,7 @@ Reference answer: B
 ========================================================================
 
 case_196
+Project record: snapshots/soft-support-bfm/81037353e0590ac3368abc87d1f3e098a53a8139.tar.zst
 
 Option A
 Goal: Test a train-only machine-learning map from PoPu Sensomatt readings to Tactilus pressure as the next validation route.
@@ -3151,6 +3348,7 @@ Reference answer: B
 ========================================================================
 
 case_197
+Project record: snapshots/soft-support-bfm/c8316a4228e94a6de1ee223dc88d157750892eee.tar.zst
 
 Option A
 Goal: Produce interaction videos so a viewer can judge whether the mattress and trampoline models look physically plausible.
@@ -3167,6 +3365,7 @@ Reference answer: B
 ========================================================================
 
 case_198
+Project record: snapshots/soft-support-bfm/c8316a4228e94a6de1ee223dc88d157750892eee.tar.zst
 
 Option A
 Goal: Pause the mattress-data solver work and make videos of objects interacting with a mattress and a trampoline so a human can judge whether the physics looks real.
@@ -3183,6 +3382,7 @@ Reference answer: A
 ========================================================================
 
 case_199
+Project record: snapshots/soft-support-bfm/0c0a12bcc72b076b4aed3dfeea990128410d66f8.tar.zst
 
 Option A
 Goal: Continue the official G1 checkpoint get-up evaluation on rigid ground, mattress, and trampoline after both published checkpoints failed the 0.05 rad joint-limit gate.
@@ -3199,6 +3399,7 @@ Reference answer: B
 ========================================================================
 
 case_200
+Project record: snapshots/soft-support-bfm/0c0a12bcc72b076b4aed3dfeea990128410d66f8.tar.zst
 
 Option A
 Goal: Obtain a rigid get-up baseline for the official frozen Unitree G1 checkpoints by changing the joint-limit gate, then compare those checkpoints on mattress and trampoline supports.
@@ -3215,6 +3416,7 @@ Reference answer: B
 ========================================================================
 
 case_201
+Project record: snapshots/soft-support-bfm/f4388dcb2390a43238a22c2873213c4c9ee31f48.tar.zst
 
 Option A
 Goal: Choose how to use the R80 formal paired results after the joint-limit amplification hypothesis is not supported.
@@ -3231,6 +3433,7 @@ Reference answer: B
 ========================================================================
 
 case_202
+Project record: snapshots/soft-support-bfm/f3b5bdc8cd6c9698b939ef1d04a1acea20f98f95.tar.zst
 
 Option A
 Goal: Make the mattress look softer under the robot by lowering the stiffness of the one-joint support.
@@ -3247,6 +3450,7 @@ Reference answer: B
 ========================================================================
 
 case_203
+Project record: snapshots/soft-support-bfm/f9f375560355e5b51d308deea876c98c4e0157c0.tar.zst
 
 Option A
 Goal: Measure the trampoline deflection-versus-radius curve under a center iron ball and rebuild the trampoline as a circular Dirichlet membrane if that curve is not a cone.
@@ -3263,6 +3467,7 @@ Reference answer: A
 ========================================================================
 
 case_204
+Project record: snapshots/soft-support-bfm/69ee457a2c250101f7a103be2eb620e9d3b6f99d.tar.zst
 
 Option A
 Goal: Make the next trampoline get-up video on a circular tensioned membrane.
@@ -3279,6 +3484,7 @@ Reference answer: A
 ========================================================================
 
 case_205
+Project record: snapshots/soft-support-bfm/55a03bb8af6ecee7f87c0f15ee2a13bc7e0b7cd7.tar.zst
 
 Option A
 Goal: Grow evidence that a local dent in the mattress stops get-up more than the trampoline sheet.
@@ -3295,6 +3501,7 @@ Reference answer: B
 ========================================================================
 
 case_206
+Project record: snapshots/soft-support-bfm/793dfa33219961a92debb9fb16d0ab83f62cec6d.tar.zst
 
 Option A
 Goal: Find the mattress spring count at which local depression fades and stand-up success returns.
@@ -3311,6 +3518,7 @@ Reference answer: B
 ========================================================================
 
 case_207
+Project record: snapshots/soft-support-bfm/917a8ae5c1b6900b979fede7d284ff8cd81dc116.tar.zst
 
 Option A
 Goal: Collect a mattress hardness-sinking figure that shows simulated and analytical steel-ball depths together.
@@ -3327,6 +3535,7 @@ Reference answer: A
 ========================================================================
 
 case_208
+Project record: snapshots/soft-support-bfm/98de20c3c45e88a6baa1249731b7e670930286af.tar.zst
 
 Option A
 Goal: Measure whether the compiled mattress matches the analytical sink under known loads.
@@ -3343,6 +3552,7 @@ Reference answer: A
 ========================================================================
 
 case_209
+Project record: snapshots/soft-support-bfm/76cfc462978a4e8f5f3fcaf8fed29be60a9b3c1a.tar.zst
 
 Option A
 Goal: Bound runner memory with process RSS checks, and collect mattress and trampoline videos.
@@ -3359,6 +3569,7 @@ Reference answer: A
 ========================================================================
 
 case_210
+Project record: snapshots/soft-support-bfm/76cfc462978a4e8f5f3fcaf8fed29be60a9b3c1a.tar.zst
 
 Option A
 Goal: Test whether a streaming physics runner stays inside a 16 GiB cgroup memory limit, then collect mattress BFM videos.
@@ -3375,6 +3586,7 @@ Reference answer: B
 ========================================================================
 
 case_211
+Project record: snapshots/soft-support-bfm/781c4b7234cfe90ffdcacc946a8ca77478676360.tar.zst
 
 Option A
 Goal: Close the main claim that local mattress sinking lowers get-up success, using the current 18-pose pair result, and send this version for paper review.
@@ -3391,6 +3603,7 @@ Reference answer: B
 ========================================================================
 
 case_212
+Project record: snapshots/soft-support-bfm/0c30e49ee86a40557b4b09882b0e600270c11f88.tar.zst
 
 Option A
 Goal: Measure get-up success against support hardness on the mattress and on the trampoline with the ProtoMotions policy.
@@ -3407,6 +3620,7 @@ Reference answer: A
 ========================================================================
 
 case_213
+Project record: snapshots/soft-support-bfm/b95cd22509b09d4d95db420b15d85f99fb7ad8ee.tar.zst
 
 Option A
 Goal: Produce the mattress figure and the trampoline figure of standup success versus support hardness.
@@ -3423,6 +3637,7 @@ Reference answer: A
 ========================================================================
 
 case_214
+Project record: snapshots/soft-support-bfm/e52212604e7b771097448fbfa0523d4e2f327160.tar.zst
 
 Option A
 Goal: Produce mattress and trampoline plots of get-up success against support hardness.
@@ -3439,6 +3654,7 @@ Reference answer: A
 ========================================================================
 
 case_215
+Project record: snapshots/soft-support-bfm/d1bb5294d1e898ae1410e16f6bdcc93d4dcc005e.tar.zst
 
 Option A
 Goal: Produce a mattress hardness versus get-up success figure.
@@ -3455,6 +3671,7 @@ Reference answer: B
 ========================================================================
 
 case_216
+Project record: snapshots/soft-support-bfm/ad336754cd22f07623a4dc952687d71092a1b2da.tar.zst
 
 Option A
 Goal: Make a mattress hardness versus stand-up success figure that shows success falling from the rigid limit to a low rate.
@@ -3471,6 +3688,7 @@ Reference answer: A
 ========================================================================
 
 case_217
+Project record: snapshots/soft-support-bfm/21ac5a6c6d6eea07a01600b19e10e94ea9f2a852.tar.zst
 
 Option A
 Goal: Produce a mattress hardness-versus-get-up-success figure from matched trials at finite alpha and at rigid infinity.
@@ -3487,6 +3705,7 @@ Reference answer: A
 ========================================================================
 
 case_218
+Project record: snapshots/soft-support-bfm/9895aaa3f342066a35fcb7e1ac6605581162bcc4.tar.zst
 
 Option A
 Goal: Obtain the mattress hardness-success curve on the final clip cohort with 50 Hz control and 6400 Hz physics.
@@ -3503,6 +3722,7 @@ Reference answer: B
 ========================================================================
 
 case_219
+Project record: snapshots/soft-support-bfm/32616fb2f3a4a8354e5e025714740dfcf97a1633.tar.zst
 
 Option A
 Goal: Complete the first stage by running the same physical probes on mattress and trampoline for all three simulation routes, then fitting those probes to real measurements.
@@ -3519,6 +3739,7 @@ Reference answer: B
 ========================================================================
 
 case_220
+Project record: snapshots/soft-support-bfm/2b1fea95677d745a3187faf16d722265de8464c1.tar.zst
 
 Option A
 Goal: Produce Route A and Route C videos of a robot on the mattress and on the trampoline from solver states that pass the current validity gates.
@@ -3535,6 +3756,7 @@ Reference answer: B
 ========================================================================
 
 case_221
+Project record: snapshots/soft-support-bfm/a1b75995a0450f341617018150adf90c1b226daa.tar.zst
 
 Option A
 Goal: Collect the Route-C mattress decomposition and trampoline static-isolation measurements under the listed input hashes.
@@ -3551,6 +3773,7 @@ Reference answer: B
 ========================================================================
 
 case_222
+Project record: snapshots/soft-support-bfm/aa4084ea48d55e54c97ded8d73dbf69237fe9c2b.tar.zst
 
 Option A
 Goal: Send Route C robot videos of the mattress and the trampoline now, and leave Route A videos until a damping check finishes.
@@ -3567,6 +3790,7 @@ Reference answer: B
 ========================================================================
 
 case_223
+Project record: snapshots/sr-main/ec00a8639112de074913cfd3eb3612e2d0f7c74a.tar.zst
 
 Option A
 Goal: Get first-seed results for two remaining tasks on PySR, full FEX, LLM-SR, and Direct.
@@ -3583,6 +3807,7 @@ Reference answer: A
 ========================================================================
 
 case_224
+Project record: snapshots/sr-material/c218bcb43fda6f07ae51771f07a5464e74c7e1cf.tar.zst
 
 Option A
 Goal: Run the four control methods on zb_rs and metal_nonmetal and record a score for each method.
@@ -3599,6 +3824,7 @@ Reference answer: A
 ========================================================================
 
 case_225
+Project record: snapshots/sr-material/c218bcb43fda6f07ae51771f07a5464e74c7e1cf.tar.zst
 
 Option A
 Goal: Measure the four baselines on zb_rs and metal_nonmetal with five seeds for each method.
@@ -3615,6 +3841,7 @@ Reference answer: A
 ========================================================================
 
 case_226
+Project record: snapshots/sr-material/63eae9f1faaa81fca1f01f2d566c3363904fc11a.tar.zst
 
 Option A
 Goal: Measure the direct and LLM-SR controls on the two material descriptor tasks with Claude Opus as the LLM provider.
@@ -3631,6 +3858,7 @@ Reference answer: B
 ========================================================================
 
 case_227
+Project record: snapshots/sr-material/63eae9f1faaa81fca1f01f2d566c3363904fc11a.tar.zst
 
 Option A
 Goal: Measure direct best-of-N and official LLM-SR scores on zb_rs and metal_nonmetal with Claude Opus.
@@ -3647,6 +3875,7 @@ Reference answer: B
 ========================================================================
 
 case_228
+Project record: snapshots/sr-material/088b1e737e7bc11c23cccdc5817d6e269d3acbcf.tar.zst
 
 Option A
 Goal: Measure 5-seed DeepSeek scores for direct best-of-N and official LLM-SR on zb_rs and metal_nonmetal at 26 calls.
@@ -3663,6 +3892,7 @@ Reference answer: A
 ========================================================================
 
 case_229
+Project record: snapshots/sr-material/41d84135d207777235375dd4c7e9d780a83092ff.tar.zst
 
 Option A
 Goal: Measure whether PySR at 50,000 and 100,000 candidates beats SR-System on zb_rs LOOCV RMSE.
@@ -3679,6 +3909,7 @@ Reference answer: B
 ========================================================================
 
 case_230
+Project record: snapshots/sr-material/6556e6ecf6693a2afed99fbdf0f71c4bd56b7376.tar.zst
 
 Option A
 Goal: Find out whether PySR on zb_rs beats the SR-System LOOCV RMSE of 0.0918 more often when the seed count and the search budget increase.
@@ -3695,6 +3926,7 @@ Reference answer: B
 ========================================================================
 
 case_231
+Project record: snapshots/sr-material/057639b0f271ba3c8007961671dfdba42ab9c269.tar.zst
 
 Option A
 Goal: Complete official LLM-SR zb_rs split coverage to 45 of 45 rows per budget, then send the control table to review.
@@ -3711,6 +3943,7 @@ Reference answer: B
 ========================================================================
 
 case_232
+Project record: snapshots/sr-material/e55972548c0996b3fbee05c6378edb4e94563449.tar.zst
 
 Option A
 Goal: Use the existing SR-System zb_rs result at a 10 to 20 candidate budget against PySR at 5000 iterations, and measure the held-out score of the already found formula.
@@ -3727,6 +3960,7 @@ Reference answer: A
 ========================================================================
 
 case_233
+Project record: snapshots/sr-material/e55972548c0996b3fbee05c6378edb4e94563449.tar.zst
 
 Option A
 Goal: Get SR-System zb_rs held-out scores by running a new search on each of the 15 train splits.
@@ -3743,6 +3977,7 @@ Reference answer: B
 ========================================================================
 
 case_234
+Project record: snapshots/sr-material/51395f7d093a15d96b7ca2ea0d5fc0072db61065.tar.zst
 
 Option A
 Goal: Make a six-method score table for zb_rs and metal_nonmetal from the current split results.
@@ -3759,6 +3994,7 @@ Reference answer: B
 ========================================================================
 
 case_235
+Project record: snapshots/transformeron/bd87503bcbe9c372e718c3eee81f5bfd2f1570df.tar.zst
 
 Option A
 Goal: Set the original-paper claim for the internal dimension d from the Qwen2.5 energy series.
@@ -3775,6 +4011,7 @@ Reference answer: B
 ========================================================================
 
 case_236
+Project record: snapshots/transformeron/919369e39c16fd6f500f964338fdc22ec5e853dd.tar.zst
 
 Option A
 Goal: Measure whether the chi_attn peak temperature changes as the attention window grows on Qwen3-4B simple-wiki prompts.
@@ -3791,6 +4028,7 @@ Reference answer: B
 ========================================================================
 
 case_237
+Project record: snapshots/transformeron/919369e39c16fd6f500f964338fdc22ec5e853dd.tar.zst
 
 Option A
 Goal: Get a finite-size scaling result for connected chi_attn on Qwen3-4B using S2 prompts.
@@ -3807,6 +4045,7 @@ Reference answer: A
 ========================================================================
 
 case_238
+Project record: snapshots/transformeron/38e06feb4d1a03921d687758147bff5b5266a32c.tar.zst
 
 Option A
 Goal: Decide which layer, observable definition, RoPE setting, and corpus give a sharp temperature-criticality signal.
@@ -3823,6 +4062,7 @@ Reference answer: A
 ========================================================================
 
 case_239
+Project record: snapshots/transformeron/ef6b4d1262a0edee49016bf23bc78478ad0f60d6.tar.zst
 
 Option A
 Goal: Determine whether including RoPE changes hidden-state layer energy on the grids where energy already shows a temperature trend.
@@ -3839,6 +4079,7 @@ Reference answer: A
 ========================================================================
 
 case_240
+Project record: snapshots/transformeron/2b3445db8f86032207e7f2731d4444e2edcbc713.tar.zst
 
 Option A
 Goal: Report how the defined energy, and chi, change across layers when RoPE is on and when RoPE is off.
@@ -3855,6 +4096,7 @@ Reference answer: A
 ========================================================================
 
 case_241
+Project record: snapshots/vln-verbal-route/21e36256e8ec0b9ffa7c16a774829b77200fbdfe.tar.zst
 
 Option A
 Goal: Test whether text place names remain usable as spatial memory when room type, graph size, and goal type change.
@@ -3871,6 +4113,7 @@ Reference answer: B
 ========================================================================
 
 case_242
+Project record: snapshots/vln-verbal-route/5160c29376c1cdcdc31e75ef0ebbf9846d323540.tar.zst
 
 Option A
 Goal: Measure how well an LLM can output name-list routes on Matterport3D graphs that use VLM place names.
@@ -3887,6 +4130,7 @@ Reference answer: B
 ========================================================================
 
 case_243
+Project record: snapshots/vln-verbal-route/8da078dd34e0f259fb81a8213156bbd94796f033.tar.zst
 
 Option A
 Goal: Decide what to run next after the R2R vocabulary-overlap diagnostic returned a low ceiling.
@@ -3903,6 +4147,7 @@ Reference answer: B
 ========================================================================
 
 case_244
+Project record: snapshots/vln-verbal-route/6c6d82454a4679630ea70d4c71bb63d7cea62b9e.tar.zst
 
 Option A
 Goal: Test whether place naming on the eight-scan visual sample can pass the recall and per-scan false-merge gate.
@@ -3919,6 +4164,7 @@ Reference answer: B
 ========================================================================
 
 case_245
+Project record: snapshots/vln-verbal-route/2b2b5aa000db4e8e52d7eb96047a3ff78030aa39.tar.zst
 
 Option A
 Goal: Test whether GPT-5.5 detailed place cards pass the naming gate on the 8-scan set after every pair is labeled with the strict room-level same-place rule.
@@ -3935,6 +4181,7 @@ Reference answer: A
 ========================================================================
 
 case_246
+Project record: snapshots/vln-verbal-route/43a33cdd1277e61bc1277227533761e6d93f54d7.tar.zst
 
 Option A
 Goal: Resume GPT-5.5 route-list stress on the eight real named graphs and independent GT repair on the 53 disputed pairs.
@@ -3951,6 +4198,7 @@ Reference answer: A
 ========================================================================
 
 case_247
+Project record: snapshots/vln-verbal-route/9e5ad4b4997125dcfc9c4fd3a8ce0f31f356a182.tar.zst
 
 Option A
 Goal: Collect end-to-end named-route scores on the six official VLN benchmarks.
