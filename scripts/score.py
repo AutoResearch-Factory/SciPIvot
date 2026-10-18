@@ -52,7 +52,7 @@ def main() -> None:
                     help="for run_project.py output: 0 = first answer, 1 and 2 = "
                          "after one and two reconsiderations (rows without a stage always count)")
     ap.add_argument("--ci", action="store_true",
-                    help="95% case-bootstrap interval (paper settings)")
+                    help="95%% case-bootstrap interval (paper settings)")
     args = ap.parse_args()
 
     refs = {c["id"]: c["reference_answer"]
@@ -82,6 +82,9 @@ def main() -> None:
             elif order != "ab":
                 sys.exit(f"unknown order {order!r} for {case_id}")
             choice_correct = float(choice == ref)
+        if order in per_case.get(case_id, {}):
+            sys.exit(f"two answers for {case_id} order {order}: score one condition, "
+                     f"model and effort per file")
         per_case.setdefault(case_id, {})[order] = choice_correct
 
     if not per_case:

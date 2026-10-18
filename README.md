@@ -33,7 +33,7 @@ Paper: *SciPIvot: Benchmarking Principal-Investigator Judgment at Pivotal Moment
 
 | Path | Contents |
 |------|----------|
-| `data/questions.json` | The complete 248-case question set: case id, both options in exact wording, reference answer, project record |
+| `data/questions.json` | The complete 248-case question set: case id, both options in exact wording, reference answer, and `snapshot`, the project record it is asked against |
 | `data/snapshots.jsonl` | The 230 project records: archive and unpacked-tree checksums, sizes, file counts |
 | `data/questions.txt` | Same set in plain text |
 | `prompts/` | Exact evaluation prompts (project / options-only / reconsideration) and the case-writing prompt |
@@ -78,11 +78,16 @@ python scripts/score.py predictions.json
 The *project* condition needs the project record each case was asked against. The records are on [Hugging Face](https://huggingface.co/datasets/sun1245/SciPIvot): accept the terms there once (name and affiliation; access is immediate), then
 
 ```bash
+# Python 3.12+
+python3 -m venv .venv && . .venv/bin/activate
 pip install huggingface_hub zstandard
-hf auth login
+hf auth login                      # or export HF_TOKEN=hf_...
 
-# Download, check and unpack the records for some cases (or --all: 230 records, 21 GB)
+# Download, check and unpack the records for some cases
 python scripts/fetch_records.py --id case_000 --id case_001 --out records
+
+# Check that every record restores, keeping only a few GB on disk at a time
+python scripts/fetch_records.py --all --out records --remove-after-verify
 
 # Run them as in the paper: both option orders, one fresh session each
 export ANTHROPIC_API_KEY=...        # or OPENAI_API_KEY for --engine codex
@@ -91,7 +96,9 @@ python scripts/run_project.py --id case_000 --id case_001 --condition project \
 python scripts/score.py runs/opus.jsonl
 ```
 
-`run_project.py` needs Linux with [bubblewrap](https://github.com/containers/bubblewrap) (`apt install bubblewrap`) and the agent's CLI (`claude` or `codex`) on `PATH`. Each session sees the record read-only at `/project`, an empty scratch HOME, and the system; not your home directory, your agent settings, or any other record. Claude Code gets only Read, Grep and Glob; Codex gets no `AGENTS.md`, rules or web search. `--condition options-only` mounts nothing. `--reconsider 2` continues each session twice with the reconsideration prompt; score a stage with `score.py --stage 1` or `--stage 2`.
+Unpacking all 230 records takes 91 GB, and the 21 GB of archives stay in the Hugging Face cache (`~/.cache/huggingface`) unless `--remove-after-verify` is given. Each archive is checked against its `sha256` and each unpacked tree against its `tree_sha256`; a tree already in `--out` is checked again rather than trusted.
+
+`run_project.py` needs Linux with [bubblewrap](https://github.com/containers/bubblewrap) (`apt install bubblewrap`) and the agent's CLI (`claude` or `codex`) on `PATH`. Each session sees the record read-only at `/project`, an empty scratch HOME, and the system; not your home directory, your agent settings, or any other record. Claude Code gets only Read, Grep and Glob; Codex gets no `AGENTS.md`, rules or web search. `--condition options-only` mounts nothing. `--reconsider 2` continues each session twice with the reconsideration prompt; score a stage with `score.py --stage 1` or `--stage 2`. Write each condition, model and effort to its own `--out` file: `score.py` refuses a file with two answers for one case and order. Every session's full output is kept beside it in `<out>.transcripts/`, and each answer records `tool_calls`, so a run that never opened the project is visible.
 
 `response` may also be the raw model output containing a JSON object with a `response` field; unparsed outputs are scored as incorrect. With both option orders present per case, `score.py` reproduces the paper's main score (orders averaged within case, then cases equally weighted). Add `--ci` for the paper's 95% case-bootstrap intervals (10,000 resamples, seed 20261004).
 

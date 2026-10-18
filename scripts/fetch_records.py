@@ -144,23 +144,48 @@ def download(snapshot: str, revision: str | None = None) -> Path:
         ) from None
 
 
+class RecordError(Exception):
+    """A snapshot that did not check out."""
+
+
+def target_of(row: dict, out: Path) -> Path:
+    return out / row["snapshot"].removeprefix("snapshots/").removesuffix(".tar.zst")
+
+
+def check(row: dict, target: Path) -> None:
+    """Raise unless the tree at `target` is exactly the snapshot."""
+    tree, files = tree_sha256_dir(target)
+    if tree != row["tree_sha256"] or files != row["files"]:
+        raise RecordError(f"{row['snapshot']}: {target} differs from the manifest "
+                          f"({files} files, expected {row['files']})")
+
+
 def restore(row: dict, out: Path, revision: str | None = None, keep_archive: bool = True) -> Path:
-    """Download, check and unpack one snapshot; return its directory."""
-    target = out / row["snapshot"].removeprefix("snapshots/").removesuffix(".tar.zst")
+    """Download, check and unpack one snapshot; return its directory.
+
+    A tree already at the target is checked, not trusted: one that was changed
+    raises, and is left alone for its owner to delete.
+    """
+    target = target_of(row, out)
     if target.is_dir():
+        check(row, target)
         return target
     archive = download(row["snapshot"], revision)
     with archive.open("rb") as handle:
         got = _sha256_stream(handle)
     if got != row["sha256"]:
-        raise SystemExit(f"{row['snapshot']}: archive sha256 {got} != {row['sha256']}")
+        raise RecordError(f"{row['snapshot']}: archive sha256 {got} != {row['sha256']}")
     unpack(archive, target)
-    tree, files = tree_sha256_dir(target)
-    if tree != row["tree_sha256"] or files != row["files"]:
+    try:
+        check(row, target)
+    except RecordError:
         shutil.rmtree(target, ignore_errors=True)
-        raise SystemExit(f"{row['snapshot']}: unpacked tree does not match the manifest")
+        raise
     if not keep_archive:
-        archive.resolve().unlink(missing_ok=True)
+        # The Hub cache holds a link to the blob; remove both.
+        blob = archive.resolve()
+        archive.unlink(missing_ok=True)
+        blob.unlink(missing_ok=True)
     return target
 
 
@@ -171,8 +196,8 @@ def main() -> None:
     ap.add_argument("--out", default="records", help="where snapshots are unpacked")
     ap.add_argument("--revision", help="dataset revision (default: main)")
     ap.add_argument("--remove-after-verify", action="store_true",
-                    help="delete each unpacked tree and its download after it checks out "
-                         "(to verify all 248 cases on a small disk)")
+                    help="delete each unpacked tree and its download after it checks out; "
+                         "with --all this checks every record using a few GB of disk")
     ap.add_argument("--questions", default=str(QUESTIONS))
     args = ap.parse_args()
 
@@ -191,16 +216,29 @@ def main() -> None:
     manifest = load_manifest()
     out = Path(args.out)
     snapshots = sorted({c["snapshot"] for c in selected})
+    failed = []
     for i, snapshot in enumerate(snapshots, 1):
         row = manifest[snapshot]
-        target = restore(row, out, args.revision, keep_archive=not args.remove_after_verify)
+        try:
+            target = restore(row, out, args.revision, keep_archive=not args.remove_after_verify)
+        except RecordError as exc:
+            failed.append(snapshot)
+            print(f"[{i}/{len(snapshots)}] FAILED {exc}", flush=True)
+            continue
         print(f"[{i}/{len(snapshots)}] ok {snapshot} -> {target}", flush=True)
         if args.remove_after_verify:
             shutil.rmtree(target)
+            try:
+                target.parent.rmdir()  # the project directory, once it is empty
+            except OSError:
+                pass
     if not args.remove_after_verify:
         for case in selected:
-            path = out / case["snapshot"].removeprefix("snapshots/").removesuffix(".tar.zst")
-            print(f"{case['id']}\t{path}")
+            if case["snapshot"] not in failed:
+                print(f"{case['id']}\t{target_of(manifest[case['snapshot']], out)}")
+    print(f"{len(snapshots) - len(failed)} of {len(snapshots)} records ok "
+          f"({len(selected)} cases)" + (f"; failed: {', '.join(failed)}" if failed else ""))
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

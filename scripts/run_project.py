@@ -27,6 +27,7 @@ Example:
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -122,19 +123,31 @@ def claude_command(project, home, model, effort, resume):
     return argv, None
 
 
-def claude_reply(stdout: str, reply_file) -> str:
-    text = ""
+def claude_reply(stdout: str) -> tuple:
+    """The final answer and the number of tool calls, from stream-json."""
+    text, calls = "", 0
     for line in stdout.splitlines():
         line = line.strip()
-        if line.startswith("{"):
-            try:
-                event = json.loads(line)
-            except ValueError:
-                continue
-            if isinstance(event, dict) and event.get("type") == "result" \
-                    and isinstance(event.get("result"), str):
-                text = event["result"].strip()
-    return text or stdout.strip()
+        if not line.startswith("{"):
+            continue
+        try:
+            event = json.loads(line)
+        except ValueError:
+            continue
+        if not isinstance(event, dict):
+            continue
+        if event.get("type") == "result" and isinstance(event.get("result"), str):
+            text = event["result"].strip()
+        message = event.get("message")
+        content = message.get("content") if isinstance(message, dict) else None
+        for block in content if isinstance(content, list) else []:
+            if isinstance(block, dict) and block.get("type") == "tool_use":
+                calls += 1
+    return text or stdout.strip(), calls
+
+
+# codex prints its transcript on stderr; a tool call is a line holding just its name.
+CODEX_CALL = re.compile(r"^(exec|apply_patch|web_search|tool)\s*$", re.M)
 
 
 def codex_command(project, home, model, effort, resume):
@@ -198,11 +211,15 @@ def run_session(case, condition, order, args, project) -> list:
             seconds = round(time.monotonic() - start, 1)
             if reply_file is not None:
                 text = reply_file.read_text(encoding="utf-8").strip() if reply_file.exists() else ""
+                calls = len(CODEX_CALL.findall(err))
             else:
-                text = claude_reply(out, None)
+                text, calls = claude_reply(out)
+            transcript = args.transcripts / f"{case['id']}_{condition}_{order}_stage{stage}.log"
+            transcript.write_text(f"===== stdout\n{out}\n===== stderr\n{err}\n", encoding="utf-8")
             rows.append({"id": case["id"], "order": order, "condition": condition, "stage": stage,
                          "engine": args.engine, "model": args.model, "effort": args.effort,
                          "response": text, "exit_code": code, "seconds": seconds,
+                         "tool_calls": calls, "transcript": str(transcript),
                          **({"stderr_tail": err[-2000:]} if code != 0 else {})})
             if code != 0:
                 break
@@ -218,8 +235,10 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--id", action="append", help="case id (repeatable)")
     ap.add_argument("--all", action="store_true")
-    ap.add_argument("--condition", default="project", choices=["project", "options-only"])
-    ap.add_argument("--order", default="both", choices=["ab", "ba", "both"])
+    ap.add_argument("--condition", default="project", choices=["project", "options-only"],
+                    help="project mounts the case's record at /project; options-only mounts nothing")
+    ap.add_argument("--order", default="both", choices=["ab", "ba", "both"],
+                    help="option order; both (default) runs ab and ba, as the paper scores them")
     ap.add_argument("--engine", required=True, choices=sorted(ENGINES))
     ap.add_argument("--model", required=True)
     ap.add_argument("--effort", default="medium", choices=EFFORTS)
@@ -227,7 +246,11 @@ def main() -> None:
                     help="continue each session this many times with the reconsideration prompt")
     ap.add_argument("--records", default="records", help="where fetch_records.py unpacks snapshots")
     ap.add_argument("--fetch", action="store_true", help="download missing snapshots first")
-    ap.add_argument("--out", required=True, help="JSON lines file; answers are appended")
+    ap.add_argument("--out", required=True,
+                    help="JSON lines file; answers are appended. Use one file per condition, "
+                         "model and effort: score.py refuses two answers to one (id, order, stage)")
+    ap.add_argument("--transcripts", type=Path,
+                    help="where each session's full output is kept (default: <out>.transcripts/)")
     ap.add_argument("--jobs", type=int, default=2)
     ap.add_argument("--timeout", type=int, default=TIMEOUT, help="seconds per answer")
     args = ap.parse_args()
@@ -245,21 +268,30 @@ def main() -> None:
     manifest = fetch_records.load_manifest()
     records = Path(args.records)
 
+    checked = {}
+
     def project_of(case):
         if args.condition != "project":
             return None
         row = manifest[case["snapshot"]]
-        target = records / row["snapshot"].removeprefix("snapshots/").removesuffix(".tar.zst")
-        if not target.is_dir():
-            if not args.fetch:
-                raise SystemExit(f"{case['id']}: {target} is missing; run fetch_records.py "
-                                 f"--id {case['id']} --out {records}, or pass --fetch")
+        target = fetch_records.target_of(row, records)
+        if target in checked:
+            return target
+        if not target.is_dir() and not args.fetch:
+            raise SystemExit(f"{case['id']}: {target} is missing; run fetch_records.py "
+                             f"--id {case['id']} --out {records}, or pass --fetch")
+        try:  # an existing tree is checked against the manifest before it is used
             fetch_records.restore(row, records)
+        except fetch_records.RecordError as exc:
+            raise SystemExit(str(exc)) from None
+        checked[target] = True
         return target
 
     jobs = [(case, order, project_of(case)) for case in selected for order in orders]
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
+    args.transcripts = args.transcripts or out.with_name(out.name + ".transcripts")
+    args.transcripts.mkdir(parents=True, exist_ok=True)
     with ThreadPoolExecutor(args.jobs) as pool, out.open("a", encoding="utf-8") as handle:
         futures = [pool.submit(run_session, c, args.condition, o, args, p) for c, o, p in jobs]
         for future in futures:
