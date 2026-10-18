@@ -40,7 +40,7 @@ def parse_choice(raw) -> str | None:
     if s in ("A", "B"):
         return s
     # Pull "response": "A" out of a raw model output.
-    m = re.search(r'"response"\s*:\s*"?(A|B)"?', s)
+    m = re.search(r'"response"\s*:\s*"?(A|B)"?(?![A-Za-z])', s)
     return m.group(1) if m else None
 
 
@@ -63,6 +63,11 @@ def main() -> None:
     per_case: dict = {}
     unparsed = 0
     unknown_ids = 0
+    settings = {tuple(row.get(k) for k in ("condition", "engine", "model", "effort"))
+                for row in preds if row.get("stage", args.stage) == args.stage}
+    if len(settings) > 1:
+        sys.exit("the file mixes runs of different condition/engine/model/effort: "
+                 + "; ".join(str(s) for s in sorted(settings, key=str)) + ". Score one per file.")
     for row in preds:
         case_id = row.get("id")
         if case_id not in refs:
@@ -101,6 +106,10 @@ def main() -> None:
     if unknown_ids:
         print(f"unknown ids skipped: {unknown_ids}")
     print(f"accuracy          : {acc * 100:.1f}%")
+    one_order = sum(len(v) == 1 for v in per_case.values())
+    if one_order:
+        print(f"warning           : {one_order} case(s) have only one option order; "
+              f"the paper's score averages both")
 
     if args.ci:
         rng = random.Random(SEED)

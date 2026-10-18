@@ -234,25 +234,29 @@ def run_session(case, condition, order, args, project) -> list:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--id", action="append", help="case id (repeatable)")
-    ap.add_argument("--all", action="store_true")
+    ap.add_argument("--all", action="store_true", help="every case")
     ap.add_argument("--condition", default="project", choices=["project", "options-only"],
                     help="project mounts the case's record at /project; options-only mounts nothing")
     ap.add_argument("--order", default="both", choices=["ab", "ba", "both"],
                     help="option order; both (default) runs ab and ba, as the paper scores them")
-    ap.add_argument("--engine", required=True, choices=sorted(ENGINES))
-    ap.add_argument("--model", required=True)
-    ap.add_argument("--effort", default="medium", choices=EFFORTS)
+    ap.add_argument("--engine", required=True, choices=sorted(ENGINES),
+                    help="claude (Claude Code) or codex (Codex CLI)")
+    ap.add_argument("--model", required=True, help="model name as your endpoint knows it")
+    ap.add_argument("--effort", default="medium", choices=EFFORTS,
+                    help="reasoning effort (default: medium, as in the paper's main table)")
     ap.add_argument("--reconsider", type=int, default=0, choices=[0, 1, 2],
                     help="continue each session this many times with the reconsideration prompt")
     ap.add_argument("--records", default="records", help="where fetch_records.py unpacks snapshots")
     ap.add_argument("--fetch", action="store_true", help="download missing snapshots first")
     ap.add_argument("--out", required=True,
-                    help="JSON lines file; answers are appended. Use one file per condition, "
-                         "model and effort: score.py refuses two answers to one (id, order, stage)")
+                    help="JSON lines file, one per condition, engine, model and effort. Running "
+                         "again resumes: finished sessions are kept and skipped, failed or "
+                         "unfinished ones are dropped from the file and run again")
     ap.add_argument("--transcripts", type=Path,
                     help="where each session's full output is kept (default: <out>.transcripts/)")
-    ap.add_argument("--jobs", type=int, default=2)
-    ap.add_argument("--timeout", type=int, default=TIMEOUT, help="seconds per answer")
+    ap.add_argument("--jobs", type=int, default=2, help="sessions run at once (default: 2)")
+    ap.add_argument("--timeout", type=int, default=TIMEOUT,
+                    help=f"seconds per answer (default: {TIMEOUT})")
     args = ap.parse_args()
 
     cases = json.loads(make_prompt.QUESTIONS.read_text(encoding="utf-8"))
@@ -287,9 +291,31 @@ def main() -> None:
         checked[target] = True
         return target
 
-    jobs = [(case, order, project_of(case)) for case in selected for order in orders]
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
+    # Resume: a session is finished when every stage it asks for answered with exit 0.
+    setting = (args.condition, args.engine, args.model, args.effort)
+    old = [json.loads(line) for line in out.read_text(encoding="utf-8").splitlines()
+           if line.strip()] if out.exists() else []
+    sessions = {}
+    for row in old:
+        if (row.get("condition"), row.get("engine"), row.get("model"), row.get("effort")) != setting:
+            raise SystemExit(f"{out} holds runs of another condition, engine, model or effort; "
+                             f"use a separate --out file")
+        sessions.setdefault((row["id"], row["order"]), []).append(row)
+    finished = {key for key, rows in sessions.items()
+                if sorted(r["stage"] for r in rows if r.get("exit_code") == 0)
+                == list(range(args.reconsider + 1))}
+    kept = [row for row in old if (row["id"], row["order"]) in finished]
+    if len(kept) != len(old):
+        out.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in kept),
+                       encoding="utf-8")
+        print(f"dropped {len(old) - len(kept)} answers of failed or unfinished sessions", flush=True)
+    todo = [(c, o) for c in selected for o in orders if (c["id"], o) not in finished]
+    if len(todo) < len(selected) * len(orders):
+        print(f"{len(selected) * len(orders) - len(todo)} sessions already finished in {out}",
+              flush=True)
+    jobs = [(case, order, project_of(case)) for case, order in todo]
     args.transcripts = args.transcripts or out.with_name(out.name + ".transcripts")
     args.transcripts.mkdir(parents=True, exist_ok=True)
     with ThreadPoolExecutor(args.jobs) as pool, out.open("a", encoding="utf-8") as handle:

@@ -119,8 +119,12 @@ def unpack(archive: Path, target: Path) -> None:
     partial = target.with_name(target.name + ".partial")
     shutil.rmtree(partial, ignore_errors=True)
     partial.mkdir()
-    with archive.open("rb") as raw, tarfile.open(fileobj=_zstd_reader(raw), mode="r|") as tar:
-        tar.extractall(partial, filter="data")
+    try:
+        with archive.open("rb") as raw, tarfile.open(fileobj=_zstd_reader(raw), mode="r|") as tar:
+            tar.extractall(partial, filter="data")
+    except BaseException:
+        shutil.rmtree(partial, ignore_errors=True)
+        raise
     partial.rename(target)
 
 
@@ -192,13 +196,15 @@ def restore(row: dict, out: Path, revision: str | None = None, keep_archive: boo
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--id", action="append", help="case id, e.g. case_000 (repeatable)")
-    ap.add_argument("--all", action="store_true", help="every case")
-    ap.add_argument("--out", default="records", help="where snapshots are unpacked")
+    ap.add_argument("--all", action="store_true", help="every case (230 records)")
+    ap.add_argument("--out", default="records",
+                    help="where records are unpacked, as <out>/<project>/<commit> (default: records)")
     ap.add_argument("--revision", help="dataset revision (default: main)")
     ap.add_argument("--remove-after-verify", action="store_true",
-                    help="delete each unpacked tree and its download after it checks out; "
-                         "with --all this checks every record using a few GB of disk")
-    ap.add_argument("--questions", default=str(QUESTIONS))
+                    help="delete each tree this run unpacks, and its download, once it checks "
+                         "out; trees already in --out are checked and kept. With --all this "
+                         "checks every record using a few GB of disk")
+    ap.add_argument("--questions", default=str(QUESTIONS), help="default: data/questions.json")
     args = ap.parse_args()
 
     cases = json.loads(Path(args.questions).read_text(encoding="utf-8"))
@@ -219,14 +225,19 @@ def main() -> None:
     failed = []
     for i, snapshot in enumerate(snapshots, 1):
         row = manifest[snapshot]
+        existed = target_of(row, out).is_dir()
         try:
             target = restore(row, out, args.revision, keep_archive=not args.remove_after_verify)
-        except RecordError as exc:
+        except (KeyboardInterrupt, SystemExit):
+            raise
+        except Exception as exc:  # a bad record or a failed download: note it, go on
             failed.append(snapshot)
-            print(f"[{i}/{len(snapshots)}] FAILED {exc}", flush=True)
+            print(f"[{i}/{len(snapshots)}] FAILED {snapshot}: {exc}", flush=True)
             continue
-        print(f"[{i}/{len(snapshots)}] ok {snapshot} -> {target}", flush=True)
-        if args.remove_after_verify:
+        removing = args.remove_after_verify and not existed
+        print(f"[{i}/{len(snapshots)}] ok {snapshot}"
+              + (" (checked, removed)" if removing else f" -> {target}"), flush=True)
+        if removing:
             shutil.rmtree(target)
             try:
                 target.parent.rmdir()  # the project directory, once it is empty

@@ -16,7 +16,7 @@ The evaluation harness finds headings with the multiline regular expression `^##
 Each template is the text after its heading and before the next matching heading (or end of file), with `.strip("\n") + "\n"` applied.
 `ask_sha256` hashes this UTF-8 template, not the full Markdown file.
 The project template hash is `22613fc33bc22f626ba5918e7a5b667a7495f69de63b7b035002b55aa1b8b54a`; the blind template hash is `de9dddb5cdd01bee3474734b465fc184fd4dc5dad4aac911fc7b0d43e5d285b2`.
-For repeat 0, `{a}` receives the rejected plan and `{b}` the corrected plan; repeat 1 reverses them.
+For repeat 0, `{a}` receives the rejected plan and `{b}` the corrected plan; repeat 1 reverses them. (In the released `questions.json` the options are shuffled, so order `ab` is repeat 0 for some cases and repeat 1 for others; the score averages both orders and is the same.)
 The implementation strips each plan, substitutes `{a}` then `{b}` with `str.replace`, and hashes the rendered prompt as `prompt_sha256`.
 
 ## Matching prompts to evaluation records
