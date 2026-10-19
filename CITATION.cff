@@ -40,7 +40,10 @@ authors:
   - family-names: Yang
     given-names: Haizhao
 date-released: "2026-10-16"
-url: "https://github.com/AutoResearch-Factory/SciPIvot"
+url: "https://arxiv.org/abs/2610.21082"
+identifiers:
+  - type: other
+    value: "arXiv:2610.21082"
 license: CC-BY-4.0
 keywords:
   - benchmark
